@@ -1,0 +1,226 @@
+/* ==========================================
+   Footer Styles - TaHa Travel Agency
+   ========================================== */
+
+.footer-top-bar {
+    background: #3a6341;
+    padding: 12px 0;
+}
+
+.footer-top-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.footer-top-links a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-top-links a:hover {
+    color: #fff;
+}
+
+.footer-top-links .divider {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.site-footer {
+    background: #44734c;
+    padding: 50px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-col {
+    color: #fff;
+}
+
+.footer-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-info li i {
+    color: #a7d9a7;
+    margin-top: 3px;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.footer-info li a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-info li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-list li a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.footer-list li a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.footer-list li a i {
+    color: #a7d9a7;
+    font-size: 0.8rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.social-btn.facebook { background: #1877f2; }
+.social-btn.twitter { background: #1da1f2; }
+.social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-btn.youtube { background: #ff0000; }
+
+.social-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.footer-contact li i {
+    color: rgba(255, 255, 255, 0.7);
+    width: 18px;
+}
+
+.footer-contact li a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-contact li a:hover {
+    color: #fff;
+}
+
+.footer-map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-map iframe {
+    display: block;
+}
+
+.footer-bottom {
+    background: #3a6341;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #fff;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top-links {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .footer-top-links .divider {
+        display: none;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .site-footer {
+        padding: 40px 0 25px;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
