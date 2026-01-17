@@ -125,9 +125,13 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .about {
+        padding: var(--space-6) 0;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
-        gap: var(--space-6);
+        gap: var(--space-4);
     }
 
     .about-title {
@@ -140,10 +144,10 @@
     }
 
     .about-text-wrapper {
-        padding: var(--space-6);
+        padding: var(--space-4);
     }
 
     .about-image {
-        max-height: 400px;
+        max-height: 300px;
     }
 }

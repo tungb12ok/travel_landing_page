@@ -235,16 +235,70 @@
 /* Small Devices (768px and down) */
 @media (max-width: 768px) {
     :root {
-        --fs-5xl: 2.5rem;
-        --fs-6xl: 3rem;
-        --fs-7xl: 3.5rem;
+        --fs-5xl: 2rem;
+        --fs-6xl: 2.5rem;
+        --fs-7xl: 3rem;
+        --fs-4xl: 1.75rem;
+        --fs-3xl: 1.5rem;
+        --fs-2xl: 1.25rem;
+        --fs-xl: 1.125rem;
+        --fs-lg: 1rem;
+        --fs-base: 0.875rem;
+        --fs-sm: 0.8125rem;
+        --fs-xs: 0.75rem;
+        --header-height: 70px;
+        --top-bar-height: 40px;
     }
     
     .section {
-        padding: var(--space-16) 0;
+        padding: var(--space-10) 0;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: calc(var(--header-height) + var(--top-bar-height));
+    }
+
+    /* About - giảm khoảng cách */
+    .about {
+        padding: var(--space-6) 0;
+    }
+
+    /* Header Mobile */
+    .header-main {
+        padding: var(--space-2) 0;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-name {
+        font-size: var(--fs-lg);
+    }
+
+    .logo-tagline {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+
+    .btn-sm {
+        padding: var(--space-1) var(--space-2);
+        font-size: 0.55rem;
+        white-space: nowrap;
+    }
+
+    .search-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .header-actions {
+        gap: var(--space-2);
     }
     
-    .section-title {
+    .section_title {
         font-size: var(--fs-3xl);
     }
     
@@ -253,23 +307,54 @@
         display: none;
     }
     
-    /* Top Bar */
-    .top-bar-left,
+    /* Top Bar Mobile */
+    .top-bar {
+        padding: var(--space-1) 0;
+    }
+
+    .top-bar .container {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+
+    .top-bar-left {
+        display: flex;
+        order: 2;
+    }
+
     .top-bar-center {
+        display: flex;
+        order: 1;
+        font-size: 0.7rem;
+    }
+
+    .top-bar-center span {
+        display: flex;
+        align-items: center;
+        gap: var(--space-1);
+    }
+
+    .top-bar-right {
         display: none;
     }
-    
-    .top-bar .container {
-        justify-content: center;
+
+    .social-links {
+        gap: var(--space-2);
+    }
+
+    .social-links a {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
     }
     
-    /* Hero */
+    /* Hero - xóa min-height vì chỉ là banner */
     .hero {
-        min-height: 600px;
+        min-height: auto;
     }
     
     .hero-title {
-        font-size: var(--fs-3xl);
+        font-size: var(--fs-2xl);
     }
     
     .hero-stats .container {

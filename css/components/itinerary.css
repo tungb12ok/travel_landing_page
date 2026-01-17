@@ -64,7 +64,7 @@
     padding: var(--space-3) 0;
     padding-left: var(--space-8);
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: var(--space-3);
 }
 
@@ -72,7 +72,8 @@
     content: '';
     position: absolute;
     left: 6px;
-    top: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
     width: 20px;
     height: 20px;
     background: var(--white);
@@ -258,6 +259,10 @@
 
 /* Responsive Design */
 @media (max-width: 992px) {
+    .itinerary {
+        padding: var(--space-10) 0;
+    }
+
     .itinerary-content {
         grid-template-columns: 1fr;
         gap: var(--space-8);
@@ -269,15 +274,82 @@
 }
 
 @media (max-width: 768px) {
-    .itinerary-title {
-        font-size: var(--fs-2xl);
+    .itinerary {
+        padding: var(--space-6) 0;
     }
 
-    .timeline-item {
+    .itinerary-container {
+        padding: 0 var(--space-3);
+    }
+
+    .itinerary-header {
+        margin-bottom: var(--space-4);
+    }
+
+    .itinerary-title {
+        font-size: var(--fs-xl);
+    }
+
+    .itinerary-subtitle {
+        font-size: var(--fs-sm);
+    }
+
+    .itinerary-content {
+        gap: var(--space-4);
+    }
+
+    /* Timeline responsive */
+    .timeline-list {
         padding-left: var(--space-6);
     }
 
+    .timeline-list::before {
+        left: 10px;
+        width: 2px;
+    }
+
+    .timeline-item {
+        padding: var(--space-2) 0;
+        padding-left: var(--space-6);
+        gap: var(--space-2);
+    }
+
+    .timeline-item::before {
+        left: 3px;
+        width: 16px;
+        height: 16px;
+        border-width: 2px;
+    }
+
+    .timeline-day {
+        font-size: var(--fs-xs);
+        min-width: 50px;
+    }
+
+    .timeline-activity {
+        font-size: var(--fs-xs);
+    }
+
+    /* Details cards responsive */
+    .itinerary-details {
+        gap: var(--space-3);
+    }
+
     .details-card {
-        padding: var(--space-4);
+        padding: var(--space-3);
+    }
+
+    .details-card h3 {
+        font-size: var(--fs-sm);
+    }
+
+    .details-card p,
+    .details-card li {
+        font-size: var(--fs-xs);
+    }
+
+    .download-btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--fs-xs);
     }
 }

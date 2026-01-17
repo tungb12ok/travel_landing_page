@@ -47,8 +47,9 @@
     --bg-gradient: linear-gradient(135deg, #44734c 0%, #2d5233 100%);
     
     /* Typography */
-    --font-primary: 'Be Vietnam Pro', sans-serif;
-    --font-heading: 'Playfair Display', serif;
+    --font-primary: 'Poppins', sans-serif;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Inter', sans-serif;
     
     /* Font Sizes */
     --fs-xs: 0.75rem;      /* 12px */

@@ -48,7 +48,6 @@ const HeaderComponent = {
                             </div>
                             <div class="logo-text">
                                 <span class="logo-name">TaHa Travel</span>
-                                <span class="logo-tagline">Explore The World</span>
                             </div>
                         </a>
 

@@ -16,7 +16,13 @@ const BookingFormComponent = {
                         </div>
 
                         <!-- Booking Form -->
-                        <form class="booking-form-content" id="bookingForm">
+                        <form class="booking-form-content" id="bookingForm" action="https://formsubmit.co/salestahatravelagecy@gmail.com" method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Travel Inquiry from TaHa Travel Website">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" id="formNextUrl" value="">
+                            
                             <div class="form-grid">
                                 <!-- Full Name -->
                                 <div class="form-field">
@@ -155,6 +161,15 @@ const BookingFormComponent = {
         document.getElementById('contact-component').innerHTML = this.template();
         this.attachEventListeners();
         this.initStarRating();
+        this.setRedirectUrl();
+    },
+
+    setRedirectUrl() {
+        const nextUrlInput = document.getElementById('formNextUrl');
+        if (nextUrlInput) {
+            // Get current origin (domain) and set redirect URL
+            nextUrlInput.value = window.location.origin + window.location.pathname + '?submitted=true';
+        }
     },
 
     initStarRating() {
@@ -259,17 +274,8 @@ const BookingFormComponent = {
             return;
         }
 
-        console.log('Form submitted:', data);
-
-        // Show success message
-        this.showSuccessMessage();
-
-        // Reset form
-        e.target.reset();
-
-        // Reset star rating
-        const starLabels = document.querySelectorAll('.star-item');
-        starLabels.forEach(label => label.classList.remove('active'));
+        // If valid, submit the form to FormSubmit
+        e.target.submit();
     },
 
     showError(fieldName, message) {
