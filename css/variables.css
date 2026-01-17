@@ -47,9 +47,9 @@
     --bg-gradient: linear-gradient(135deg, #44734c 0%, #2d5233 100%);
     
     /* Typography */
-    --font-primary: 'Poppins', sans-serif;
-    --font-heading: 'Cormorant Garamond', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-primary: 'Raleway', sans-serif;
+    --font-heading: 'Raleway', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
     
     /* Font Sizes */
     --fs-xs: 0.75rem;      /* 12px */

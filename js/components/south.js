@@ -25,7 +25,7 @@ const SouthComponent = {
                 <div class="south-container">
                     <!-- Header -->
                     <div class="south-header" data-aos="fade-up">
-                        <h2 class="south-title">South in Vietnam : Ho Chi Minh, Cu Chi Tunnel, Mekong Delta</h2>
+                        <h2 class="south-title">South in Vietnam : Ho Chi Minh - Cu Chi Tunnel - Mekong Delta</h2>
                     </div>
 
                     <!-- South Grid -->

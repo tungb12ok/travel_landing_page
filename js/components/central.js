@@ -25,7 +25,7 @@ const CentralComponent = {
                 <div class="central-container">
                     <!-- Header -->
                     <div class="central-header" data-aos="fade-up">
-                        <h2 class="central-title">Central in Vietnam : Danang, Hoi An, Hue</h2>
+                        <h2 class="central-title">Central in Vietnam : Danang - Hoi An - Hue</h2>
                     </div>
 
                     <!-- Central Grid -->

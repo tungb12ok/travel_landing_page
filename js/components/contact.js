@@ -16,7 +16,7 @@ const BookingFormComponent = {
                         </div>
 
                         <!-- Booking Form -->
-                        <form class="booking-form-content" id="bookingForm" action="https://formsubmit.co/salestahatravelagecy@gmail.com" method="POST">
+                        <form class="booking-form-content" id="bookingForm" action="https://formsubmit.co/salestahatravelagency@gmail.com" method="POST">
                             <!-- FormSubmit Configuration -->
                             <input type="hidden" name="_subject" value="New Travel Inquiry from TaHa Travel Website">
                             <input type="hidden" name="_captcha" value="false">
