@@ -1,129 +1,149 @@
 /**
- * Contact Component - TaHa Travel Agency
- * Beautiful & Modern Design
+ * Booking Form Component - TaHa Travel Agency
+ * Contact and Booking Form
  */
 
-const ContactComponent = {
+const BookingFormComponent = {
     template() {
         return `
-            <!-- Contact & About Section -->
-            <section class="contact-about-section" id="contact">
-                <div class="contact-about-overlay"></div>
-                <div class="container">
-                    <div class="contact-about-wrapper">
-                        <!-- Left Side - Contact Form -->
-                        <div class="contact-side" data-aos="fade-right">
-                            <span class="section-badge">Contact Us</span>
-                            <h2 class="section-title">Get In Touch</h2>
-                            <p class="section-desc">Have questions about your next adventure? Our travel experts are here to help you plan the perfect trip.</p>
-                            
-                            <div class="form-card">
-                                <div class="form-header">
-                                    <div class="form-icon">
-                                        <i class="fas fa-paper-plane"></i>
-                                    </div>
-                                    <div>
-                                        <h3>Send Us a Message</h3>
-                                        <p>We'll respond within 24 hours</p>
-                                    </div>
-                                </div>
-                                
-                                <form class="contact-form" id="contact-form">
-                                    <div class="form-grid">
-                                        <div class="form-field">
-                                            <i class="fas fa-user"></i>
-                                            <input type="text" name="name" placeholder="Full Name *" required>
-                                        </div>
-                                        <div class="form-field">
-                                            <i class="fas fa-envelope"></i>
-                                            <input type="email" name="email" placeholder="Email Address *" required>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-grid">
-                                        <div class="form-field">
-                                            <i class="fab fa-whatsapp"></i>
-                                            <input type="tel" name="phone" placeholder="Phone / WhatsApp">
-                                        </div>
-                                        <div class="form-field">
-                                            <i class="fas fa-list"></i>
-                                            <select name="subject" required>
-                                                <option value="">Select Subject *</option>
-                                                <option value="booking">Tour Booking</option>
-                                                <option value="inquiry">General Inquiry</option>
-                                                <option value="custom">Custom Tour</option>
-                                                <option value="feedback">Feedback</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-field full">
-                                        <i class="fas fa-comment-dots"></i>
-                                        <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
-                                    </div>
-                                    
-                                    <button type="submit" class="btn-submit">
-                                        <span>Send Message</span>
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </form>
-                            </div>
+            <section class="booking-form" id="booking">
+                <div class="booking-form-container">
+                    <div class="booking-form-wrapper" data-aos="fade-up">
+                        <!-- Form Introduction -->
+                        <div class="booking-form-intro">
+                            <h2>Plan Your Perfect Trip</h2>
+                            <p>Using the form below, and we will contact you with full details and personalized consultation.</p>
                         </div>
 
-                        <!-- Right Side - About Us -->
-                        <div class="about-side" data-aos="fade-left" id="about">
-                            <h2 class="about-title">TaHa Travel Agency</h2>
-                            <div class="about-text">
-                                <p>With a team of experienced and passionate staff, Taha Travel organizes all-inclusive tours, teambuilding activities, conferences, and various other services, ensuring the diverse needs of customers are met.</p>
-                                <p>Taha Travel takes pride in being a professional travel company with many years of experience in the tourism industry. Adhering to the motto <strong>"Quality makes the difference,"</strong> Taha Travel strives to deliver unforgettable journeys, combining cultural exploration, natural beauty, and the essence of Vietnam's people.</p>
-                                <p>Notably, the company focuses on designing customized travel programs tailored to the individual preferences and specific needs of each customer.</p>
-                                <p>With the vision of becoming a pioneering enterprise in creative design training and AI applications in business, Taha Travel continuously learns and adopts advanced training and coaching methods to enhance service quality and provide the best value to its clients.</p>
-                            </div>
-                            <div class="about-features">
-                                <div class="about-feature">
-                                    <i class="fas fa-award"></i>
-                                    <span>Quality Service</span>
+                        <!-- Booking Form -->
+                        <form class="booking-form-content" id="bookingForm">
+                            <div class="form-grid">
+                                <!-- Full Name -->
+                                <div class="form-field">
+                                    <label class="form-label">
+                                        Full Name
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="text" class="form-input" name="fullName" placeholder="Enter your full name" required>
                                 </div>
-                                <div class="about-feature">
-                                    <i class="fas fa-users"></i>
-                                    <span>Expert Team</span>
-                                </div>
-                                <div class="about-feature">
-                                    <i class="fas fa-heart"></i>
-                                    <span>Customer First</span>
-                                </div>
-                                <div class="about-feature">
-                                    <i class="fas fa-globe-asia"></i>
-                                    <span>Local Expertise</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Newsletter Section -->
-            <section class="newsletter-section">
-                <div class="container">
-                    <div class="newsletter-wrapper" data-aos="fade-up">
-                        <div class="newsletter-content">
-                            <div class="newsletter-icon">
-                                <i class="fas fa-gift"></i>
+                                <!-- Email -->
+                                <div class="form-field">
+                                    <label class="form-label">
+                                        Email
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="email" class="form-input" name="email" placeholder="your.email@example.com" required>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="form-field">
+                                    <label class="form-label">
+                                        Phone number
+                                        <span class="required">*</span>
+                                    </label>
+                                    <div class="phone-input-wrapper">
+                                        <select class="form-select country-code" name="countryCode">
+                                            <option value="+1">🇺🇸 +1</option>
+                                            <option value="+84" selected>🇻🇳 +84</option>
+                                            <option value="+44">🇬🇧 +44</option>
+                                            <option value="+86">🇨🇳 +86</option>
+                                            <option value="+81">🇯🇵 +81</option>
+                                            <option value="+82">🇰🇷 +82</option>
+                                            <option value="+65">🇸🇬 +65</option>
+                                            <option value="+66">🇹🇭 +66</option>
+                                        </select>
+                                        <input type="tel" class="form-input phone-number" name="phone" placeholder="123 456 7890" required>
+                                    </div>
+                                </div>
+
+                                <!-- Number of Travelers -->
+                                <div class="form-field">
+                                    <label class="form-label">
+                                        How many people will be traveling?
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="number" class="form-input" name="travelers" min="1" placeholder="Number of travelers" required>
+                                </div>
+
+                                <!-- Hotel Stars -->
+                                <div class="form-field">
+                                    <label class="form-label">
+                                        How many star hotel
+                                    </label>
+                                    <div class="star-rating">
+                                        <input type="radio" id="star1" name="hotelStars" value="1">
+                                        <label for="star1" class="star-item" data-rating="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" id="star2" name="hotelStars" value="2">
+                                        <label for="star2" class="star-item" data-rating="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" id="star3" name="hotelStars" value="3">
+                                        <label for="star3" class="star-item" data-rating="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" id="star4" name="hotelStars" value="4">
+                                        <label for="star4" class="star-item" data-rating="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" id="star5" name="hotelStars" value="5">
+                                        <label for="star5" class="star-item" data-rating="5">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Travel Month -->
+                                <div class="form-field">
+                                    <label class="form-label">
+                                        What month do you plan to travel
+                                    </label>
+                                    <select class="form-select" name="travelMonth">
+                                        <option value="">Select month</option>
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+
+                                <!-- Travel Date -->
+                                <div class="form-field">
+                                    <label class="form-label">
+                                        Travel day
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="date" class="form-input" name="travelDate" required>
+                                </div>
+
+                                <!-- Questions -->
+                                <div class="form-field full-width">
+                                    <label class="form-label">
+                                        Your questions about anything...
+                                    </label>
+                                    <textarea class="form-textarea" name="questions" placeholder="Tell us about your travel preferences, special requests, or any questions you have..."></textarea>
+                                </div>
                             </div>
-                            <div class="newsletter-text">
-                                <h3>Subscribe for Special Offers</h3>
-                                <p>Get 10% off your first booking!</p>
-                            </div>
-                        </div>
-                        <form class="newsletter-form" id="newsletter-form">
-                            <div class="newsletter-input-group">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" placeholder="Enter your email..." required>
-                                <button type="submit">
-                                    <span>Subscribe</span>
-                                    <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="form-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Inquiry
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -133,47 +153,178 @@ const ContactComponent = {
 
     init() {
         document.getElementById('contact-component').innerHTML = this.template();
-        this.initForm();
-        this.initNewsletter();
+        this.attachEventListeners();
+        this.initStarRating();
     },
 
-    initForm() {
-        const form = document.getElementById('contact-form');
-        if (!form) return;
-        
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.showToast('Thank you! We will contact you soon.', 'success');
-            form.reset();
+    initStarRating() {
+        const starInputs = document.querySelectorAll('.star-rating input[type="radio"]');
+        const starLabels = document.querySelectorAll('.star-item');
+
+        starInputs.forEach((input, index) => {
+            input.addEventListener('change', () => {
+                // Reset all stars
+                starLabels.forEach(label => {
+                    label.classList.remove('active');
+                });
+
+                // Highlight stars up to selected rating
+                for (let i = 0; i <= index; i++) {
+                    starLabels[i].classList.add('active');
+                }
+            });
+        });
+
+        // Add hover effect
+        starLabels.forEach((label, index) => {
+            label.addEventListener('mouseenter', () => {
+                // Highlight stars up to hovered star
+                for (let i = 0; i <= index; i++) {
+                    starLabels[i].classList.add('hover');
+                }
+            });
+
+            label.addEventListener('mouseleave', () => {
+                // Remove hover effect from all stars
+                starLabels.forEach(l => l.classList.remove('hover'));
+            });
         });
     },
 
-    initNewsletter() {
-        const form = document.getElementById('newsletter-form');
-        if (!form) return;
-        
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.showToast('Thank you for subscribing!', 'success');
-            form.reset();
+    attachEventListeners() {
+        const form = document.getElementById('bookingForm');
+        if (form) {
+            form.addEventListener('submit', this.handleSubmit.bind(this));
+        }
+    },
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        // Clear previous errors
+        this.clearErrors();
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+
+        // Validation
+        let isValid = true;
+
+        // Full Name validation
+        if (!data.fullName || data.fullName.trim().length < 2) {
+            this.showError('fullName', 'Please enter your full name (at least 2 characters)');
+            isValid = false;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!data.email || !emailRegex.test(data.email)) {
+            this.showError('email', 'Please enter a valid email address');
+            isValid = false;
+        }
+
+        // Phone validation
+        if (!data.phone || data.phone.trim().length < 6) {
+            this.showError('phone', 'Please enter a valid phone number');
+            isValid = false;
+        }
+
+        // Number of travelers validation
+        if (!data.travelers || parseInt(data.travelers) < 1) {
+            this.showError('travelers', 'Please enter number of travelers (minimum 1)');
+            isValid = false;
+        }
+
+        // Travel date validation
+        if (!data.travelDate) {
+            this.showError('travelDate', 'Please select your travel date');
+            isValid = false;
+        } else {
+            const selectedDate = new Date(data.travelDate);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            if (selectedDate < today) {
+                this.showError('travelDate', 'Travel date must be in the future');
+                isValid = false;
+            }
+        }
+
+        if (!isValid) {
+            // Scroll to first error
+            const firstError = document.querySelector('.form-error');
+            if (firstError) {
+                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+        }
+
+        console.log('Form submitted:', data);
+
+        // Show success message
+        this.showSuccessMessage();
+
+        // Reset form
+        e.target.reset();
+
+        // Reset star rating
+        const starLabels = document.querySelectorAll('.star-item');
+        starLabels.forEach(label => label.classList.remove('active'));
+    },
+
+    showError(fieldName, message) {
+        const input = document.querySelector(`[name="${fieldName}"]`);
+        if (!input) return;
+
+        const formField = input.closest('.form-field');
+        if (!formField) return;
+
+        // Add error class to input
+        input.classList.add('error');
+
+        // Create error message
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'form-error';
+        errorDiv.textContent = message;
+
+        formField.appendChild(errorDiv);
+    },
+
+    clearErrors() {
+        // Remove error classes
+        document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
+            input.classList.remove('error');
+        });
+
+        // Remove error messages
+        document.querySelectorAll('.form-error').forEach(error => {
+            error.remove();
         });
     },
 
-    showToast(message, type) {
-        const existing = document.querySelector('.toast-msg');
-        if (existing) existing.remove();
-        
-        const toast = document.createElement('div');
-        toast.className = `toast-msg ${type}`;
-        toast.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
-        document.body.appendChild(toast);
-        
-        setTimeout(() => toast.classList.add('show'), 10);
+    showSuccessMessage() {
+        const message = document.createElement('div');
+        message.className = 'success-message';
+        message.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you for your inquiry!</p>
+            <p>We will contact you soon with full details and personalized consultation.</p>
+        `;
+
+        document.body.appendChild(message);
+
         setTimeout(() => {
-            toast.classList.remove('show');
-            setTimeout(() => toast.remove(), 300);
-        }, 3000);
+            message.classList.add('show');
+        }, 100);
+
+        setTimeout(() => {
+            message.classList.remove('show');
+            setTimeout(() => message.remove(), 300);
+        }, 4000);
     }
 };
 
-document.addEventListener('DOMContentLoaded', () => ContactComponent.init());
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    BookingFormComponent.init();
+});

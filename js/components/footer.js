@@ -13,10 +13,10 @@ const FooterComponent = {
     ],
 
     socialLinks: [
-        { icon: 'fab fa-youtube', href: '#', color: '#ff0000' },
-        { icon: 'fab fa-facebook-f', href: '#', color: '#1877f2' },
-        { icon: 'fab fa-facebook-messenger', href: '#', color: '#0084ff' },
-        { icon: 'fab fa-instagram', href: '#', color: '#e4405f' }
+        { icon: 'fab fa-facebook-f', href: 'https://www.facebook.com/TahaTravelAgency/', color: '#1877f2' },
+        { icon: 'fab fa-instagram', href: 'https://www.instagram.com/tahatravel.2024', color: '#e4405f' },
+        { icon: 'fab fa-youtube', href: 'https://www.youtube.com/@TaHaTravel-2024', color: '#ff0000' },
+        { icon: 'fab fa-tiktok', href: 'https://www.tiktok.com/@vietnambesttour?_r=1&_t=ZS-939PaC3zpCC', color: '#000000' }
     ],
 
     template() {

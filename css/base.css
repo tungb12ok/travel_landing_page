@@ -186,6 +186,11 @@ input, textarea, select {
     box-shadow: var(--shadow-lg);
 }
 
+.btn-sm {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-xs);
+}
+
 .btn-secondary {
     background: var(--secondary-color);
     color: var(--white);

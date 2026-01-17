@@ -16,7 +16,7 @@ const HeaderComponent = {
                             <a href="https://www.instagram.com/tahatravel.2024/" target="_blank" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" target="_blank" aria-label="TikTok">
+                            <a href="https://www.tiktok.com/@vietnambesttour?_r=1&_t=ZS-939PaC3zpCC" target="_blank" aria-label="TikTok">
                                 <i class="fab fa-tiktok"></i>
                             </a>
                             <a href="https://www.youtube.com/@TaHaTravel-2024" target="_blank" aria-label="YouTube">
@@ -171,7 +171,7 @@ const HeaderComponent = {
                             <button class="search-btn" id="search-toggle" aria-label="Search">
                                 <i class="fas fa-search"></i>
                             </button>
-                            <a href="#contact" class="btn btn-primary">Book Now</a>
+                            <a href="#contact" class="btn btn-primary btn-sm">Book Now</a>
                             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
                                 <span></span>
                                 <span></span>
