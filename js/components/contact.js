@@ -6,7 +6,7 @@
 const BookingFormComponent = {
     template() {
         return `
-            <section class="booking-form" id="booking">
+            <section class="booking-form" id="contact">
                 <div class="booking-form-container">
                     <div class="booking-form-wrapper" data-aos="fade-up">
                         <!-- Form Introduction -->

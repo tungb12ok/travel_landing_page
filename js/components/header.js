@@ -158,11 +158,11 @@ const HeaderComponent = {
                             </div>
 
                             <div class="nav-item">
-                                <a href="#services" class="nav-link">About Us</a>
+                                <a href="#about" class="nav-link">About Us</a>
                             </div>
 
                             <div class="nav-item">
-                                <a href="#contact" class="nav-link">Contact</a>
+                                <a href="#consultant" class="nav-link">Contact</a>
                             </div>
                         </nav>
 
