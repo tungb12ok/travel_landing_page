@@ -1,0 +1,283 @@
+/* ==========================================
+   Itinerary Component Styles
+   ========================================== */
+
+.itinerary {
+    position: relative;
+    padding: var(--space-16) 0;
+    background: var(--bg-secondary);
+}
+
+.itinerary-container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.itinerary-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.itinerary-title {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+    color: var(--text-heading);
+    margin-bottom: var(--space-4);
+}
+
+.itinerary-subtitle {
+    font-size: var(--fs-lg);
+    color: var(--text-secondary);
+}
+
+/* Main Content Grid */
+.itinerary-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    margin-bottom: var(--space-12);
+}
+
+/* Timeline Section */
+.itinerary-timeline {
+    position: relative;
+}
+
+.timeline-list {
+    position: relative;
+    padding-left: var(--space-8);
+}
+
+.timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--primary-light));
+}
+
+.timeline-item {
+    position: relative;
+    padding: var(--space-3) 0;
+    padding-left: var(--space-8);
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: var(--space-4);
+    width: 20px;
+    height: 20px;
+    background: var(--white);
+    border: 3px solid var(--primary-color);
+    border-radius: var(--radius-full);
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(68, 115, 76, 0.1);
+}
+
+.timeline-item:hover::before {
+    background: var(--primary-color);
+    transform: scale(1.2);
+    transition: all var(--transition-normal);
+}
+
+.timeline-day {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    color: var(--primary-color);
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.timeline-activity {
+    font-size: var(--fs-sm);
+    color: var(--text-primary);
+    line-height: var(--lh-relaxed);
+    flex: 1;
+}
+
+/* Map Section */
+.itinerary-map {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-lg);
+}
+
+.map-image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-6);
+}
+
+.map-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+}
+
+.map-notes {
+    background: var(--primary-lighter);
+    border-left: 4px solid var(--primary-color);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+}
+
+.map-notes-title {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--space-3);
+}
+
+.map-notes-list {
+    list-style: none;
+}
+
+.map-notes-list li {
+    font-size: var(--fs-xs);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-4);
+    position: relative;
+}
+
+.map-notes-list li::before {
+    content: '✈';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Details Section */
+.itinerary-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+}
+
+.details-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+}
+
+.details-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.details-card-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-lg);
+}
+
+.details-card-title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--text-heading);
+}
+
+.details-list {
+    list-style: none;
+}
+
+.details-list li {
+    font-size: var(--fs-xs);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-5);
+    position: relative;
+    line-height: var(--lh-relaxed);
+}
+
+.details-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: var(--fw-bold);
+}
+
+.details-list.excluded li::before {
+    content: '✗';
+    color: var(--secondary-color);
+}
+
+/* Download Button */
+.itinerary-download {
+    text-align: center;
+    margin-top: var(--space-8);
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-10);
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 15px rgba(68, 115, 76, 0.3);
+}
+
+.download-btn:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(68, 115, 76, 0.4);
+}
+
+.download-btn i {
+    font-size: var(--fs-xl);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .itinerary-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .itinerary-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .itinerary-title {
+        font-size: var(--fs-2xl);
+    }
+
+    .timeline-item {
+        padding-left: var(--space-6);
+    }
+
+    .details-card {
+        padding: var(--space-4);
+    }
+}

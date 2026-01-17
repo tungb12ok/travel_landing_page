@@ -1,0 +1,160 @@
+/* ==========================================
+   Tour Cards - Shared Styles
+   For Regions, Central, South, Phu Quoc Components
+   ========================================== */
+
+/* Common Card Styles */
+.region-card,
+.central-card,
+.south-card,
+.phuquoc-card {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.region-card:hover,
+.central-card:hover,
+.south-card:hover,
+.phuquoc-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Common Image Styles */
+.region-image,
+.central-image,
+.south-image,
+.phuquoc-image {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.region-image::before,
+.central-image::before,
+.south-image::before,
+.phuquoc-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+    opacity: 0.8;
+    transition: opacity var(--transition-normal);
+}
+
+.region-card:hover .region-image::before,
+.central-card:hover .central-image::before,
+.south-card:hover .south-image::before,
+.phuquoc-card:hover .phuquoc-image::before {
+    opacity: 1;
+}
+
+.region-image img,
+.central-image img,
+.south-image img,
+.phuquoc-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.region-card:hover .region-image img,
+.central-card:hover .central-image img,
+.south-card:hover .south-image img,
+.phuquoc-card:hover .phuquoc-image img {
+    transform: scale(1.1);
+}
+
+/* Common Content Styles */
+.region-content,
+.central-content,
+.south-content,
+.phuquoc-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-6);
+    z-index: 2;
+    color: var(--white);
+}
+
+.region-package,
+.central-package,
+.south-package,
+.phuquoc-package {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-bold);
+    color: var(--white);
+    line-height: var(--lh-snug);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Common Icon Styles */
+.region-icon,
+.central-icon,
+.south-icon,
+.phuquoc-icon {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: var(--fs-lg);
+    z-index: 2;
+    transition: all var(--transition-normal);
+}
+
+/* Icon Hover - Different colors for each region */
+.region-card:hover .region-icon {
+    background: var(--primary-color);
+    transform: rotate(15deg) scale(1.1);
+}
+
+.central-card:hover .central-icon {
+    background: var(--secondary-color);
+    transform: rotate(15deg) scale(1.1);
+}
+
+.south-card:hover .south-icon {
+    background: var(--accent-coral);
+    transform: rotate(15deg) scale(1.1);
+}
+
+.phuquoc-card:hover .phuquoc-icon {
+    background: var(--accent-teal);
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .region-image,
+    .central-image,
+    .south-image,
+    .phuquoc-image {
+        height: 220px;
+    }
+
+    .region-content,
+    .central-content,
+    .south-content,
+    .phuquoc-content {
+        padding: var(--space-4);
+    }
+}
