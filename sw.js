@@ -3,7 +3,7 @@
  * Caching strategy for better performance
  */
 
-const CACHE_NAME = 'taha-travel-v3';
+const CACHE_NAME = 'taha-travel-v5';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -16,6 +16,7 @@ const urlsToCache = [
     '/css/components/footer.css',
     '/css/components/hero.css',
     '/css/components/about.css',
+    '/css/components/bestsale.css',
     '/css/components/services.css',
     '/css/components/destinations.css',
     '/css/components/tours.css',
@@ -33,6 +34,7 @@ const urlsToCache = [
     '/js/components/footer.js',
     '/js/components/hero.js',
     '/js/components/about.js',
+    '/js/components/bestsale.js',
     '/js/components/services.js',
     '/js/components/destinations.js',
     '/js/components/regions.js',
