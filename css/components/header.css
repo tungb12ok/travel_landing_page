@@ -6,8 +6,8 @@
 .top-bar {
     background: var(--primary-color);
     color: var(--white);
-    padding: var(--space-2) 0;
-    font-size: var(--fs-sm);
+    padding: 10px 0;
+    font-size: 14px;
     position: relative;
     z-index: var(--z-sticky);
 }
@@ -18,77 +18,91 @@
     justify-content: space-between;
 }
 
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
 .top-bar-left {
     display: flex;
     align-items: center;
-    gap: var(--space-6);
-}
-
-.top-bar-info {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    color: var(--white);
-    font-size: var(--fs-sm);
-}
-
-.top-bar-info i {
-    color: var(--secondary-color);
-}
-
-.top-bar-center {
-    font-weight: var(--fw-medium);
+    position: absolute;
+    left: 0;
 }
 
 .top-bar-right {
     display: flex;
     align-items: center;
-    gap: var(--space-4);
+}
+
+.whatsapp-info {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 14px;
 }
 
 .social-links {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
+    gap: 8px;
 }
 
 .social-links a {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
     color: var(--white);
-    border-radius: var(--radius-full);
-    transition: all var(--transition-fast);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 13px;
 }
 
-.social-links a:hover {
-    background: var(--white);
-    color: var(--primary-color);
+/* Facebook */
+.social-links a[href*="facebook"] {
+    background: #1877F2;
+}
+
+.social-links a[href*="facebook"]:hover {
+    background: #0d65d9;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(24, 119, 242, 0.3);
 }
 
-.language-selector {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-1) var(--space-3);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    transition: background var(--transition-fast);
+/* Instagram */
+.social-links a[href*="instagram"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
-.language-selector:hover {
-    background: rgba(255, 255, 255, 0.2);
+.social-links a[href*="instagram"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(225, 48, 108, 0.3);
 }
 
-.language-selector img {
-    width: 20px;
-    height: 14px;
-    border-radius: 2px;
+/* TikTok */
+.social-links a[href*="tiktok"] {
+    background: #000000;
+}
+
+.social-links a[href*="tiktok"]:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* YouTube */
+.social-links a[href*="youtube"] {
+    background: #FF0000;
+}
+
+.social-links a[href*="youtube"]:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
 }
 
 /* Main Header */

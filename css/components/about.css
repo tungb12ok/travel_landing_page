@@ -4,7 +4,7 @@
 
 .about {
     position: relative;
-    padding: var(--space-12) 0;
+    padding: var(--space-20) 0;
     background: var(--bg-primary);
 }
 
@@ -16,8 +16,8 @@
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-8);
+    grid-template-columns: 7fr 5fr;
+    gap: var(--space-12);
     align-items: stretch;
 }
 
@@ -51,7 +51,7 @@
 .about-text-wrapper {
     position: relative;
     width: 100%;
-    padding: var(--space-8);
+    padding: var(--space-12);
     border: 2px solid var(--primary-color);
     border-radius: var(--radius-lg);
     background: var(--white);
@@ -63,10 +63,10 @@
 
 .about .about-text-wrapper .about-title,
 .about-text-wrapper .about-title {
-    font-size: var(--fs-lg) !important;
+    font-size: var(--fs-3xl) !important;
     font-weight: var(--fw-bold) !important;
     color: var(--black) !important;
-    margin-bottom: var(--space-4) !important;
+    margin-bottom: var(--space-6) !important;
     line-height: var(--lh-snug) !important;
     text-align: center !important;
     text-shadow: none !important;
@@ -75,7 +75,7 @@
 
 .about .about-text-wrapper .about-description,
 .about-text-wrapper .about-description {
-    font-size: var(--fs-xs) !important;
+    font-size: var(--fs-base) !important;
     line-height: var(--lh-relaxed) !important;
     color: var(--black) !important;
     margin-bottom: var(--space-6) !important;

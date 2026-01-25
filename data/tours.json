@@ -1,0 +1,182 @@
+{
+  "tours": [
+    {
+      "id": "hanoi-ninh-binh-halong-5days",
+      "slug": "hanoi-ninh-binh-halong-quang-phu-cau-5-days",
+      "name": "5 Days Hanoi - Ninh Binh - Halong - Quang Phu Cau",
+      "region": "North Vietnam",
+      "duration": "5 Days 4 Nights",
+      "thumbnail": "images/destinations/hn-ninh-binh.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=xaiNw1Bx4DA",
+      "description": "Experience the best of North Vietnam with this comprehensive 5-day tour. Explore the vibrant streets of Hanoi, discover the stunning landscapes of Ninh Binh, cruise through the magnificent Halong Bay, and visit the colorful Quang Phu Cau Incense Village.",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Hanoi Arrival - Hanoi Tour",
+          "content": "Check in hotel\nYou have free and easy time to explore.\n13:00 - Pick-up from hotel\nHoan Kiem Lake\nEnjoy a relaxing walk around Hanoi's iconic lake, considered the heart of the city, and learn about its historical and cultural significance.\nThe Old Quarter (36 Streets)\nExplore the bustling Old Quarter and visit some of its most vibrant and famous streets, including:\nTa Hien Street – Known as the famous \"Beer Street,\" where locals and visitors gather to enjoy the lively atmosphere.\nHang Dao Street – Well known for local fashion, silk products, and traditional souvenirs.\nHang Gai Street – Also called \"Silk Street,\" ideal for shopping high-quality silk and tailor-made clothing.\nSt. Joseph's Cathedral\nAdmire the impressive neo-Gothic architecture inspired by Notre Dame de Paris and enjoy the surrounding lively area.\nTrain Street\nExperience one of Hanoi's most unique attractions, where trains pass through a narrow residential street - a must-see spot for photos.\n18:30 - Dinner\nEnjoy Bún Chả, a famous Hanoi specialty dish, at a local restaurant.\n19:00 - Return to hotel\nTour ends."
+        },
+        {
+          "day": 2,
+          "title": "Ninh Binh",
+          "content": "08:00: After breakfast, Our guide will meet you at your  hotel/stay and start a 110km modern  Bus-journey through the verdant landscape of the countryside. Short-brake en route.\n10:15: Visit Hoa Lu Ancient Citadel with Dinh King Temple and Le King Temple dating back to the 17th Century.\n11:30: Leisure  cycling on rural roads alongside the extensive canal network and through small villages with the backdrop of a maze of limestone mountains.\n12:15: We will have a buffet lunch at the restaurant with a lot of local foods like goat meat and fried rice. Vegetarian food is always available at the buffet lunch.\n13:00: Visit Trang An, which was recognized by UNESCO as a World Heritage Site in 2014. This remarkable landscape features a network of tunnel caves that captivated filmmakers, inspiring the iconic \"Kong: Skull Island\" – 2016.\nBoat trip to visit Trang An to see the amazing beauty of this landscape with many caves such as: Sang Cave (Light Cave), Toi Cave (Dack cave), Nau Ruou Cave (Cooking Wine), green river and natural view.\n15:15: Get on the bus to go to Hang Mua (Mua Cave). Walk up almost 500 steps, you can reach the top of Lying Dragon Mountain, and have an amazing panoramic view of Tam Coc from here.\n17:15: Get on the bus then come back to Hanoi.\n19:30: Drop you off at your hotel. Trip ends."
+        },
+        {
+          "day": 3,
+          "title": "Halong",
+          "content": "08:30: After hotel breakfast, our limousine will pick you up at the hotel and transfer to Quang Ninh, stop over for a rest on the way.\n11:45-12:00: Arrival at Tuan Chau Island. Welcome aboard and have Vietnamese traditional Lunch with seafood while cruising though the amazing rocks: Incense Burner, Cock Fighting…\n13:30: Explore Sung Sot Cave (Surprising cave): The longest, biggest and the most beautiful cave of Halong Bay.Perched 25 meters above the sea, Sung Sot Caves stretch across 10,000 square meters. A mesmerizing 800-meter stone pathway, bathed in the glow of colorful lanterns, winds through the cavern's depths, revealing its hidden wonders.\n14:45: Explore Luon Cave, a stunning water cave, by kayak or bamboo boat. Relax and soak in the serene beauty of the surroundings.\n\n15:45: Visit Titop Island for swimming, sunbathing, or trekking to the peak for panoramic views of the bay.\n16:30: Back to cruise. Enjoy a Sunset party on the sundeck with Red wine, French fries, cakes, Fruits...\n17:45-18:00: Back to Ha Long harbor.\n20:30: Drop you off at your Hanoi hotel. Trip end."
+        },
+        {
+          "day": 4,
+          "title": "Incense village",
+          "content": "07:00 - 08:00: Breakfast at hotel\n08:00 - 09:30: Transfer to Quang Phu Cau Incense Village\n09:30 - 11:00: Visit the traditional incense-making village\nLearn about the handmade incense process.\nPhoto stop with colorful incense bundles.\n11:30 - 12:30: Lunch at local restaurant\n13:00 - 14:00: Transfer to Mega Grand World Hanoi (Ocean Park area)\n14:00 - 17:30: Explore Mega Grand World\nEnjoy European-style architecture, canals, shopping streets.\nFree time for photos, cafés, shopping.\n18:00: Return to hotel\nEvening: Free time at leisure"
+        },
+        {
+          "day": 5,
+          "title": "Departure",
+          "content": "Hotel Breakfast\nCheck out from the hotel and board your transfer to the airport"
+        }
+      ],
+      "seo": {
+        "title": "5 Days Hanoi - Ninh Binh - Halong - Quang Phu Cau Tour | TaHa Travel",
+        "description": "Experience the best of North Vietnam in 5 days. Explore Hanoi's Old Quarter, cruise Halong Bay, discover Ninh Binh's UNESCO sites, and visit traditional incense villages.",
+        "keywords": "hanoi tour, halong bay cruise, ninh binh tour, quang phu cau, north vietnam tour, trang an, sung sot cave, vietnam travel"
+      }
+    },
+    {
+      "id": "hanoi-sapa-halong-5days",
+      "slug": "hanoi-sapa-cat-cat-fansipan-halong-5-days",
+      "name": "5 Days Hanoi - Sapa Cat Cat - Fansipan - Halong",
+      "region": "North Vietnam",
+      "duration": "5 Days 4 Nights",
+      "thumbnail": "https://bizweb.dktcdn.net/100/514/154/files/du-lich-sapa.jpg?v=1730803322034",
+      "videoUrl": "https://www.youtube.com/watch?v=BR-AowRvdb4",
+      "description": "Embark on an unforgettable 5-day journey through North Vietnam's most spectacular destinations. Trek through Sapa's Cat Cat Village, conquer Fansipan Peak, explore Hanoi's vibrant streets, and cruise the stunning Halong Bay.",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Hanoi Arrival – Hanoi Tour",
+          "content": "Check in hotel\nYou have free and easy time to explore.\n13:00 - Pick-up from hotel\nHoan Kiem Lake\nEnjoy a relaxing walk around Hanoi's iconic lake, considered the heart of the city, and learn about its historical and cultural significance.\nThe Old Quarter (36 Streets)\nExplore the bustling Old Quarter and visit some of its most vibrant and famous streets, including:\nTa Hien Street – Known as the famous \"Beer Street,\" where locals and visitors gather to enjoy the lively atmosphere.\nHang Dao Street – Well known for local fashion, silk products, and traditional souvenirs.\nHang Gai Street – Also called \"Silk Street,\" ideal for shopping high-quality silk and tailor-made clothing.\nSt. Joseph's Cathedral\nAdmire the impressive neo-Gothic architecture inspired by Notre Dame de Paris and enjoy the surrounding lively area.\nTrain Street\nExperience one of Hanoi's most unique attractions, where trains pass through a narrow residential street - a must-see spot for photos.\n\n18:30 - Dinner\nEnjoy Bún Chả, a famous Hanoi specialty dish, at a local restaurant.\n19:00 - Return to hotel\nTour ends."
+        },
+        {
+          "day": 2,
+          "title": "Sapa cat cat",
+          "content": "Breakfast: Since pick  up early  the hotel will prepare a packed breakfast for your group.\n06:10 – 06:30: Pick-up from your hotel, board a sleeping bus, and depart for Sapa Town.\n09:30: First comfort stop along the highway to Lao Cai City.\n11:00: Second comfort stop at Lao Cai City before continuing towards Sapa.\n13:00: Arrive in Sapa Town, where you will be welcomed by the vibrant traditional costumes of the H'Mong, Dzao, and Tay ethnic communities. Enjoy lunch with Vietnamese dishes.\n14:30: Begin a short trek to Cat Cat Village, home of the Black H'Mong people. The village lies in a picturesque valley at the foot of Fansipan Peak. Accompanied by a local guide, discover the daily life of the villagers and trek down to the valley to visit a waterfall and the remains of a French-built Hydro Power Station. Take photos at the iconic bridge and waterfall before trekking uphill to meet the bus for your return to Sapa Town.\n17:00: Return to Sapa Town. Enjoy dinner at a local restaurant and overnight at your hotel in Sapa.\n18:00: Free discover Night Market in Sapa"
+        },
+        {
+          "day": 3,
+          "title": "Sapa Fansipan",
+          "content": "08:00: After breakfast, our guide will pick you up at the hotel.  Transfer to the Cable car station. You will see Muong Hoa valley, Hoang Lien Son mountain in a beautiful sea of clouds from a cable car. Fansipan peak is 3.143m high, the highest mountain of the  Indochinese peninsula (including Laos & Cambodia). It takes 15 mins by cable car and climbing about 600 steps to reach the  peak. From Fansipan peak, enjoy the view of: Hoang Lien Son majestic wild forest, and mountain ranges, and Muong Hoa Valley. Take a photo to save this memorable moment. Then you return  to the cable car station to move down. If you choose to walk down instead, you can stop to visit Bao An Thien Tu, Bich Van Thien Tu, the huge copper Buddha  Statue & Guanyin Statue. \n\n11:30: Return to the town. \n12:00: Check out then have lunch. It's your free time to exploring and shopping\n11:30: Return to the town. \n12:00: Check out then have lunch. It's your free time to  explore and shop. \n13:30: Back to Hanoi. \n20:00: Hotel drop-off. Trip ends."
+        },
+        {
+          "day": 4,
+          "title": "Halong Bay",
+          "content": "08:30: After hotel breakfast, our limousine will pick you up at the hotel and transfer to Quang Ninh, stop over for a rest on the way.\n11:45-12:00: Arrival at Tuan Chau Island. Welcome aboard and have Vietnamese traditional Lunch with seafood while cruising though the amazing rocks: Incense Burner, Cock Fighting…\n13:30: Explore Sung Sot Cave (Surprising cave): The longest, biggest and the most beautiful cave of Halong Bay.Perched 25 meters above the sea, Sung Sot Caves stretch across 10,000 square meters. A mesmerizing 800-meter stone pathway, bathed in the glow of colorful lanterns, winds through the cavern's depths, revealing its hidden wonders.\n\n14:45: Explore Luon Cave, a stunning water cave, by kayak or bamboo boat. Relax and soak in the serene beauty of the surroundings.\n15:45: Visit Titop Island for swimming, sunbathing, or trekking to the peak for panoramic views of the bay.\n16:30: Back to cruise. Enjoy a Sunset party on the sundeck with Red wine, French fries, cakes, Fruits...\n17:45-18:00: Back to Ha Long harbor.\n20h30: Drop you off at your Hanoi hotel. Trip ends."
+        },
+        {
+          "day": 5,
+          "title": "Departure",
+          "content": "Hotel Breakfast\nCheck out from the hotel and board your transfer to the airport"
+        }
+      ],
+      "seo": {
+        "title": "5 Days Hanoi - Sapa - Fansipan - Halong Bay Tour | TaHa Travel",
+        "description": "Discover North Vietnam in 5 days. Trek Cat Cat Village in Sapa, conquer Fansipan Peak, explore Hanoi's Old Quarter, and cruise magnificent Halong Bay.",
+        "keywords": "sapa tour, fansipan peak, cat cat village, halong bay, hanoi tour, north vietnam, trekking sapa, vietnam adventure"
+      }
+    },
+    {
+      "id": "hanoi-sapa-halong-6days",
+      "slug": "hanoi-sapa-fansipan-halong-overnight-6-days",
+      "name": "6 Days Hanoi - Sapa - Fansipan - Halong Overnight",
+      "region": "North Vietnam",
+      "duration": "6 Days 5 Nights",
+      "thumbnail": "https://master-orange.s3.ap-northeast-1.amazonaws.com/media/3003/%E5%8C%97%E8%B6%8A7%E5%A4%A96%E5%A4%9C%E9%81%8A%EF%BC%9A%E4%B8%8B%E9%BE%8D%E7%81%A3-%E8%96%A9%E5%B8%95-%E9%99%B8%E9%BE%8D%E7%81%A301%20%E6%8B%B7%E8%B2%9D.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=2Nj9nFgtLyc",
+      "description": "Experience the ultimate North Vietnam adventure with 6 days of unforgettable experiences. Explore Hanoi, trek Sapa's Cat Cat Village, conquer Fansipan Peak, and enjoy an overnight cruise on the magnificent Halong Bay.",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Hanoi Arrival – Hanoi Tour",
+          "content": "Check in hotel\nYou have free and easy time to explore.\n13:00 - Pick-up from hotel\nHoan Kiem Lake\nEnjoy a relaxing walk around Hanoi's iconic lake, considered the heart of the city, and learn about its historical and cultural significance.\nThe Old Quarter (36 Streets)\nExplore the bustling Old Quarter and visit some of its most vibrant and famous streets, including:\nTa Hien Street – Known as the famous \"Beer Street,\" where locals and visitors gather to enjoy the lively atmosphere.\nHang Dao Street – Well known for local fashion, silk products, and traditional souvenirs.\nHang Gai Street – Also called \"Silk Street,\" ideal for shopping high-quality silk and tailor-made clothing.\nSt. Joseph's Cathedral\nAdmire the impressive neo-Gothic architecture inspired by Notre Dame de Paris and enjoy the surrounding lively area.\nTrain Street\nExperience one of Hanoi's most unique attractions, where trains pass through a narrow residential street - a must-see spot for photos.\n18:30 - Dinner\nEnjoy Bún Chả, a famous Hanoi specialty dish, at a local restaurant.\n19:00 - Return to hotel\nTour ends."
+        },
+        {
+          "day": 2,
+          "title": "Sapa Cat Cat",
+          "content": "Breakfast: Since pick  up early  the hotel will prepare a packed breakfast for your group.\n06:10 – 06:30: Pick-up from your hotel, board a sleeping bus, and depart for Sapa Town.\n09:30: First comfort stop along the highway to Lao Cai City.\n11:00: Second comfort stop at Lao Cai City before continuing towards Sapa.\n13:00: Arrive in Sapa Town, where you will be welcomed by the vibrant traditional costumes of the H'Mong, Dzao, and Tay ethnic communities. Enjoy lunch with Vietnamese dishes.\n14:30: Begin a short trek to Cat Cat Village, home of the Black H'Mong people. The village lies in a picturesque valley at the foot of Fansipan Peak. Accompanied by a local guide, discover the daily life of the villagers and trek down to the valley to visit a waterfall and the remains of a French-built Hydro Power Station. Take photos at the iconic bridge and waterfall before trekking uphill to meet the bus for your return to Sapa Town.\n17:00: Return to Sapa Town. Enjoy dinner at a local restaurant and overnight at your hotel in Sapa.\n18:00: Free discover Night Market in Sapa"
+        },
+        {
+          "day": 3,
+          "title": "Sapa Fansipan",
+          "content": "08h00: After breakfast, our guide will pick you up at the hotel.  Transfer to the Cable car station. You will see Muong Hoa valley, Hoang Lien Son mountain in a beautiful sea of clouds from a cable car. Fansipan peak is 3.143m high, the highest mountain of the  Indochinese peninsula (including Laos & Cambodia). It takes 15 mins by cable car and climbing about 600 steps to reach the  peak. From Fansipan peak, enjoy the view of: Hoang Lien Son majestic wild forest, and mountain ranges, and Muong Hoa Valley. Take a photo to save this memorable moment. Then you return  to the cable car station to move down. If you choose to walk down instead, you can stop to visit Bao An Thien Tu, Bich Van Thien Tu, the huge copper Buddha  Statue & Guanyin Statue. 11h30: Return to the town. 12:00: Check out then have lunch. It's your free time to exploring and shopping\n11:30: Return to the town. \n\n12:00: Check out then have lunch. It's your free time to  explore and shop. \n13:30: Back to Hanoi by sleeping bus \n20:00: Hotel check in. Overnight in Ha noi"
+        },
+        {
+          "day": 4,
+          "title": "Halong Bay",
+          "content": "08:00: Limousine will take you from your hotel, transporting you to Halong.\n11:45: Your arrival at Tuan Chau Island is the Cruises check-in lounge.\n\n12:15: After being taken to Cruises, you will be checked-in. While enjoying a welcome drink, you will be introduced to the itinerary and safety briefing by the Cruise Manager.\n13\"00: You will have a delicious lunch and enjoy the stunning views when the boat cruises towards the southeast of Halong Bay, passing Fighting- Cock and Finger Islet (Thumb Islet).\n14:45: Visiting Luon Cave or Pearl Farm area by bamboo boat or kayaking.\n16h00: You are going to Titov Island - where you can go swimming or hiking to the top for another stunning, panoramic view of the Bay.\n17:30: Back on board, you can enjoy a Sunset party with HAPPY HOUR (from 17:30 – 19:00) – buy 2 get 1 free at the bar.\n\n\n19:00: Delight in the shimmering atmosphere of thousands of stars while eating a fantastic, expertly prepared dinner.\n20h30: This is the perfect time for you to relax with spa treatments or enjoy a cocktail. Besides, we provide free squid fishing tools at reception. Overnight on Lily Cruises."
+        },
+        {
+          "day": 5,
+          "title": "Halong Bay",
+          "content": "06:00: Warm up your day on the sundeck with a breathtaking view as the sun rises on Halong Bay.\n07:00: Light breakfast is served at the restaurant.\n08:00: Your next stop is the magnificent Sung Sot Cave, one of the biggest caves in Halong Bay with beautiful stalactites. You will be surprised by the breathtaking panoramic view across the Bay once you exit the cave as well as the stalactites and stalagmites formed over millions of years which have taken on fascinating shapes.\t\n09:30: Back on board, check-out and return to Tuan Chau Island\n10:00: Brunch is served at the restaurant \n10:45: Disembark at Tuan Chau Marina, return to Hanoi. Trip ends."
+        },
+        {
+          "day": 6,
+          "title": "Departure",
+          "content": "Hotel Breakfast\nCheck out from the hotel and board your transfer to the airport"
+        }
+      ],
+      "seo": {
+        "title": "6 Days Hanoi - Sapa - Fansipan - Halong Overnight Cruise | TaHa Travel",
+        "description": "Ultimate 6-day North Vietnam experience with overnight Halong Bay cruise. Trek Sapa, conquer Fansipan, explore Hanoi, and sleep under the stars on Halong Bay.",
+        "keywords": "halong bay overnight cruise, sapa trekking, fansipan peak, hanoi tour, north vietnam 6 days, vietnam adventure tour, cat cat village"
+      }
+    },
+    {
+      "id": "hanoi-sapa-moana-glass-bridge-6days",
+      "slug": "hanoi-sapa-fansipan-moana-glass-bridge-alpine-coaster-6-days",
+      "name": "6 Days Hanoi - Sapa Fansipan - Moana - Glass Bridge - Alpine Coaster",
+      "region": "North Vietnam",
+      "duration": "6 Days 5 Nights",
+      "thumbnail": "https://master-orange.s3.ap-northeast-1.amazonaws.com/media/3003/%E5%8C%97%E8%B6%8A7%E5%A4%A96%E5%A4%9C%E9%81%8A%EF%BC%9A%E4%B8%8B%E9%BE%8D%E7%81%A3-%E8%96%A9%E5%B8%95-%E9%99%B8%E9%BE%8D%E7%81%A301%20%E6%8B%B7%E8%B2%9D.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=1qWeKBiwsJM",
+      "description": "Experience the ultimate Sapa adventure with thrilling activities and stunning landscapes. Explore Hanoi, trek Cat Cat Village, conquer Fansipan, visit Moana Café, walk on the Glass Bridge, and ride the Alpine Coaster.",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Hanoi Arrival – Hanoi Tour",
+          "content": "Check in hotel\nYou have free and easy time to explore.\n13:00 - Pick-up from hotel\nHoan Kiem Lake\nEnjoy a relaxing walk around Hanoi's iconic lake, considered the heart of the city, and learn about its historical and cultural significance.\nThe Old Quarter (36 Streets)\nExplore the bustling Old Quarter and visit some of its most vibrant and famous streets, including:\nTa Hien Street – Known as the famous \"Beer Street,\" where locals and visitors gather to enjoy the lively atmosphere.\nHang Dao Street – Well known for local fashion, silk products, and traditional souvenirs.\nHang Gai Street – Also called \"Silk Street,\" ideal for shopping high-quality silk and tailor-made clothing.\nSt. Joseph's Cathedral\nAdmire the impressive neo-Gothic architecture inspired by Notre Dame de Paris and enjoy the surrounding lively area.\nTrain Street\nExperience one of Hanoi's most unique attractions, where trains pass through a narrow residential street - a must-see spot for photos.\n18:30 - Dinner\nEnjoy Bún Chả, a famous Hanoi specialty dish, at a local restaurant.\n19:00 - Return to hotel\nTour ends."
+        },
+        {
+          "day": 2,
+          "title": "Sapa Cat Cat",
+          "content": "Breakfast: Since pick  up early  the hotel will prepare a packed breakfast for your group.\n06:10 – 06:30: Pick-up from your hotel, board a sleeping bus, and depart for Sapa Town.\n09:30: First comfort stop along the highway to Lao Cai City.\n11:00: Second comfort stop at Lao Cai City before continuing towards Sapa.\n13:00: Arrive in Sapa Town, where you will be welcomed by the vibrant traditional costumes of the H'Mong, Dzao, and Tay ethnic communities. Enjoy lunch with Vietnamese dishes.\n14:30: Begin a short trek to Cat Cat Village, home of the Black H'Mong people. The village lies in a picturesque valley at the foot of Fansipan Peak. Accompanied by a local guide, discover the daily life of the villagers and trek down to the valley to visit a waterfall and the remains of a French-built Hydro Power Station. Take photos at the iconic bridge and waterfall before trekking uphill to meet the bus for your return to Sapa Town.\n17:00: Return to Sapa Town. Enjoy dinner at a local restaurant and overnight at your hotel in Sapa.\n18:00: Free discover Night Market in Sapa"
+        },
+        {
+          "day": 3,
+          "title": "Fansipan – Moana",
+          "content": "07:00 – 08:00\n Breakfast at Homestay.\n08:00 – 08:30\n Our guide picks you up at the hotel and transfers to Fansipan Cable Car Station.\n08:30 – 11:30\n Take the cable car to conquer Fansipan Peak (3,143m) – the highest mountain of the Indochinese peninsula (including Laos & Cambodia).\n From the cable car, you will see Muong Hoa Valley and Hoang Lien Son mountain range in a beautiful sea of clouds.\n It takes about 15 minutes by cable car and around 600 steps to reach the peak.\n\nFrom Fansipan peak, enjoy breathtaking views of the majestic Hoang Lien Son forest, surrounding mountain ranges, and Muong Hoa Valley. Take photos to capture this unforgettable moment.\nThen return to the cable car station to go down.\n If you choose to walk down instead, you may stop to visit Bao An Thien Tu, Bich Van Thien Tu, the giant copper Buddha statue, and the Guanyin statue, located within the spiritual complex.\n11:30\n Return to Sapa town.\n12:00 – 13:00\n Buffet lunch at a local restaurant.\n 13:30 – 15:30\n Visit Moana Café, one of the most popular check-in stations in Sapa.\n Enjoy stunning mountain views and take photos with iconic attractions such as the giant hands, heaven gate, Bali-style swing, and artistic structures.\n15:30 – 17:00\n Free time for exploring Sapa town, shopping, or relaxing.\nEvening\n Overnight in Sapa."
+        },
+        {
+          "day": 4,
+          "title": "Glass Bridge – Alpine coaster",
+          "content": "07:00 – 08:00\n Breakfast at homestay.\n08h30 – 10h30\n Visit Rong May Glass Bridge - one of the highest glass bridges in Vietnam.\n Experience thrilling views over deep valleys and dramatic mountain landscapes.\n11:30 – 12:30\n Lunch at a local restaurant.\n13:30 | Alpine Coaster Experience\n Experience the Alpine Coaster, a thrilling mountain ride offering beautiful scenery and an exciting adventure.\nFree time for exploring Sapa town, shopping, or relaxing.\nOvernight in Sapa."
+        },
+        {
+          "day": 5,
+          "title": "Free time in Sapa - back to Hanoi",
+          "content": "Free time for exploring Sapa town, shopping, or relaxing.\n14:00 | Return to Hanoi\nTransfer back to Hanoi by sleeper bus or limousine bus.\n20:00 – 21:00 | Arrival in Hanoi\nOvernight in Ha Noi."
+        },
+        {
+          "day": 6,
+          "title": "Departure",
+          "content": "Hotel Breakfast\nCheck out from the hotel and board your transfer to the airport"
+        }
+      ],
+      "seo": {
+        "title": "6 Days Sapa Adventure - Fansipan - Glass Bridge - Alpine Coaster | TaHa Travel",
+        "description": "Ultimate Sapa adventure tour with Fansipan Peak, Moana Café, Rong May Glass Bridge, and Alpine Coaster. Experience the best of North Vietnam's mountain paradise.",
+        "keywords": "sapa adventure, glass bridge vietnam, alpine coaster sapa, fansipan peak, moana cafe sapa, cat cat village, sapa activities, north vietnam tour"
+      }
+    }
+  ]
+}

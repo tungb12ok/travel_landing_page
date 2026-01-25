@@ -8,30 +8,25 @@ const HeaderComponent = {
             <!-- Top Bar -->
             <div class="top-bar">
                 <div class="container">
-                    <div class="top-bar-left">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/TahaTravelAgency" target="_blank" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/tahatravel.2024/" target="_blank" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@vietnambesttour?_r=1&_t=ZS-939PaC3zpCC" target="_blank" aria-label="TikTok">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                            <a href="https://www.youtube.com/@TaHaTravel-2024" target="_blank" aria-label="YouTube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
+                    <div class="top-bar-content">
+                        <div class="top-bar-left">
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/TahaTravelAgency" target="_blank" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/tahatravel.2024/" target="_blank" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@vietnambesttour?_r=1&_t=ZS-939PaC3zpCC" target="_blank" aria-label="TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@TaHaTravel-2024" target="_blank" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="top-bar-center">
-                        <span><i class="fab fa-whatsapp"></i> Whatsapp: +84 84 950 8358</span>
-                    </div>
-                    <div class="top-bar-right">
-                        <div class="language-selector">
-                            <i class="fas fa-globe"></i>
-                            <span>EN</span>
-                            <i class="fas fa-chevron-down"></i>
+                        <div class="top-bar-right">
+                            <span class="whatsapp-info">Taha Travel Agency - Whatsapp number : +84 84 950 8358</span>
                         </div>
                     </div>
                 </div>
