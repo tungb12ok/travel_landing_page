@@ -1,0 +1,130 @@
+{
+  "tours": [
+    {
+      "id": "phu-quoc-4days",
+      "slug": "phu-quoc-hon-thom-6-destinations-4-days",
+      "name": "4 Days Phu Quoc - Hon Thom - 6 Destinations",
+      "region": "Phu Quoc",
+      "duration": "4 Days 3 Nights",
+      "thumbnail": "https://letsflytravel.vn/wp-content/uploads/2024/05/hon-thom-phu-quoc-1024x576.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=7ox9cMgYPFU",
+      "description": "Discover the paradise island of Phu Quoc with stunning beaches, vibrant markets, and natural beauty. Take the cable car to Hon Thom Island and explore 6 must-visit destinations including Sunset Town, Phu Quoc Prison, and Sao Beach.",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Phu Quoc Arrival",
+          "content": "Check in hotel\nAnd spend the day freely exploring its stunning beaches, vibrant markets, and natural beauty at your own pace."
+        },
+        {
+          "day": 2,
+          "title": "4 Island + Hon Thom",
+          "content": "08:00-09:00: Pick up from your hotel and transfer to Anh Duong Cable Car Station (located in Sunset Town)\n09:15: Board the cable car and enjoy a scenic ride to Hon Thom Island\nHave fun at Aquatopia Water Park and Exotica Theme Park with unlimited access to thrilling rides and slides. Enjoy a lunch buffet at a restaurant on Hon Thom Island.\n16:30-17:00: Take the cable car back to Anh Duong Cable Car Station.\nVisit the iconic Kiss Bridge Phu Quoc, a must-see attraction."
+        },
+        {
+          "day": 3,
+          "title": "6 Destination Tour",
+          "content": "(For the best experience, the schedule may be changed)\n09:00 The car picks you up at hotel/resort\nVinpearl – 8:00\nOng Lang Beach – 8:20\nDuong Dong – 8:40\nTruong Beach – 9:30\n10:00 Start the tour of 6 most attractive land spots in Phu Quoc\n\nSUNSET TOWN\n(Check-in Cable car station, Roman Arena)\n\nPHU QUOC PRISON\n(Visit historical site of Phu Quoc)\n\nFISH SAUCE FACTORY\n(Learn about the production process of Phu Quoc fish sauce specialties)\n\nSAO BEACH\n(Have lunch, swim and rest)\n\nHO QUOC PAGODA\n(Visit the largest temple in Phu Quoc)\n\nSUNSET SANATO\n(One of the best places for checking-in and enjoying sunset)\n\n17:00 The car takes you back to your hotel/resort"
+        },
+        {
+          "day": 4,
+          "title": "Departure",
+          "content": "Hotel Breakfast\nCheck out from the hotel and board your transfer to the airport"
+        }
+      ],
+      "seo": {
+        "title": "4 Days Phu Quoc - Hon Thom Island - 6 Destinations Tour | TaHa Travel",
+        "description": "Explore Phu Quoc's paradise beaches and attractions. Cable car to Hon Thom Island, Aquatopia Water Park, Sao Beach, Ho Quoc Pagoda, and Sunset Town.",
+        "keywords": "phu quoc tour, hon thom island, cable car phu quoc, sao beach, sunset town, phu quoc prison, vietnam island tour"
+      }
+    },
+    {
+      "id": "phu-quoc-5days",
+      "slug": "phu-quoc-hon-thom-6-destinations-vinwonders-grand-world-5-days",
+      "name": "5 Days Phu Quoc - Hon Thom - 6 Destinations - VinWonders - Grand World",
+      "region": "Phu Quoc",
+      "duration": "5 Days 4 Nights",
+      "thumbnail": "https://phuquocexpress.com/wp-content/uploads/2023/09/phu-quoc-express-kham-pha-7-cai-nhat-o-phu-quoc-9-1024x614.jpg.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=kA0TifTZg4A",
+      "description": "Ultimate Phu Quoc experience with Hon Thom Island cable car, 6 must-visit destinations, VinWonders Theme Park - the biggest in Vietnam, and the sleepless city Grand World with spectacular shows and entertainment.",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Phu Quoc Arrival",
+          "content": "Check in hotel\nAnd spend the day freely exploring its stunning beaches, vibrant markets, and natural beauty at your own pace."
+        },
+        {
+          "day": 2,
+          "title": "4 Island + Hon Thom",
+          "content": "08:00-09:00: Pick up from your hotel and transfer to Anh Duong Cable Car Station (located in Sunset Town)\n09:15: Board the cable car and enjoy a scenic ride to Hon Thom Island\nHave fun at Aquatopia Water Park and Exotica Theme Park with unlimited access to thrilling rides and slides. Enjoy a lunch buffet at a restaurant on Hon Thom Island.\n16:30-17:00: Take the cable car back to Anh Duong Cable Car Station.\nVisit the iconic Kiss Bridge Phu Quoc, a must-see attraction."
+        },
+        {
+          "day": 3,
+          "title": "6 Destination Tour",
+          "content": "(For the best experience, the schedule may be changed)\n09:00 The car picks you up at hotel/resort\nVinpearl – 8:00\nOng Lang Beach – 8:20\nDuong Dong – 8:40\nTruong Beach – 9:30\n10:00 Start the tour of 6 most attractive land spots in Phu Quoc\n\nSUNSET TOWN\n(Check-in Cable car station, Roman Arena)\n\nPHU QUOC PRISON\n(Visit historical site of Phu Quoc)\n\nFISH SAUCE FACTORY\n(Learn about the production process of Phu Quoc fish sauce specialties)\n\nSAO BEACH\n(Have lunch, swim and rest)\n\nHO QUOC PAGODA\n(Visit the largest temple in Phu Quoc)\n\nSUNSET SANATO\n(One of the best places for checking-in and enjoying sunset)\n\n17:00 The car takes you back to your hotel/resort"
+        },
+        {
+          "day": 4,
+          "title": "VinWonders + Grand World",
+          "content": "Shuttle car picks you up at hotel/resort\nHave fun at VinWonders – The biggest Theme Park in VietNam\n\nThrilling games, Water Park, Castle, Fairy Tales Garden, Viking's Village, Aquarium - watching show \"The Love Story's Mermaid\"\nHave lunch at restaurant\n\nVisit \"Sleepless City\" - Grand World\n\nDiscover artistic highlight Bamboo Legend\nEnjoy Vietnamese Essence Show (not expenses included)\nHave Bun Quay - specialty food in Phu Quoc\n\nEnjoy lively atmosphere at night with \"The Colors of Venice\""
+        },
+        {
+          "day": 5,
+          "title": "Departure",
+          "content": "Hotel Breakfast\nCheck out from the hotel and board your transfer to the airport"
+        }
+      ],
+      "seo": {
+        "title": "5 Days Phu Quoc - VinWonders - Grand World - Hon Thom | TaHa Travel",
+        "description": "Complete Phu Quoc experience with Hon Thom cable car, 6 destinations, VinWonders Theme Park, and Grand World's spectacular shows. Explore Vietnam's island paradise.",
+        "keywords": "phu quoc vinwonders, grand world phu quoc, hon thom cable car, phu quoc 5 days, vietnam theme park, sao beach phu quoc"
+      }
+    },
+    {
+      "id": "phu-quoc-6days",
+      "slug": "phu-quoc-hon-thom-vinwonders-grand-world-southern-tour-6-days",
+      "name": "6 Days Phu Quoc - Hon Thom - VinWonders - Grand World - Southern Tour",
+      "region": "Phu Quoc",
+      "duration": "6 Days 5 Nights",
+      "thumbnail": "https://img.poibank.com/V_LujVkm86IHWPN8Ig7bdWu2DBw=/W3siZm9ybWF0IjoianBnIn0seyJrZXkiOiJzdWdnZXN0aW9uLzI3MzY5ODg4LzM4Njk1MTkvMTY5NzIwNzM2NjMzNSJ9LHsicmVzaXplIjp7IndpZHRoIjoiMTU2NyJ9fV0=",
+      "videoUrl": "https://www.youtube.com/watch?v=YGKPuEYqON4",
+      "description": "The most comprehensive Phu Quoc tour package. Experience Hon Thom Island, 6 iconic destinations, VinWonders Theme Park, Grand World entertainment, and a complete Southern Island tour including Pearl Farm, Sim Wine Factory, and Pepper Farm.",
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Phu Quoc Arrival",
+          "content": "Check in hotel\nAnd spend the day freely exploring its stunning beaches, vibrant markets, and natural beauty at your own pace."
+        },
+        {
+          "day": 2,
+          "title": "4 Island + Hon Thom",
+          "content": "08:00-09:00: Pick up from your hotel and transfer to Anh Duong Cable Car Station (located in Sunset Town)\n09:15: Board the cable car and enjoy a scenic ride to Hon Thom Island\nHave fun at Aquatopia Water Park and Exotica Theme Park with unlimited access to thrilling rides and slides. Enjoy a lunch buffet at a restaurant on Hon Thom Island.\n16:30-17:00: Take the cable car back to Anh Duong Cable Car Station.\nVisit the iconic Kiss Bridge Phu Quoc, a must-see attraction."
+        },
+        {
+          "day": 3,
+          "title": "6 Destination Tour",
+          "content": "(For the best experience, the schedule may be changed)\n09:00 The car picks you up at hotel/resort\nVinpearl – 8:00\nOng Lang Beach – 8:20\nDuong Dong – 8:40\nTruong Beach – 9:30\n10:00 Start the tour of 6 most attractive land spots in Phu Quoc\n\nSUNSET TOWN\n(Check-in Cable car station, Roman Arena)\n\nPHU QUOC PRISON\n(Visit historical site of Phu Quoc)\n\nFISH SAUCE FACTORY\n(Learn about the production process of Phu Quoc fish sauce specialties)\n\nSAO BEACH\n(Have lunch, swim and rest)\n\nHO QUOC PAGODA\n(Visit the largest temple in Phu Quoc)\n\nSUNSET SANATO\n(One of the best places for checking-in and enjoying sunset)\n\n17:00 The car takes you back to your hotel/resort"
+        },
+        {
+          "day": 4,
+          "title": "VinWonders + Grand World",
+          "content": "Shuttle car picks you up at hotel/resort\nHave fun at VinWonders – The biggest Theme Park in VietNam\n\nThrilling games, Water Park, Castle, Fairy Tales Garden, Viking's Village, Aquarium - watching show \"The Love Story's Mermaid\"\nHave lunch at restaurant\n\nVisit \"Sleepless City\" - Grand World\n\nDiscover artistic highlight Bamboo Legend\n\nEnjoy Vietnamese Essence Show (not expenses included)\n\nHave Bun Quay - specialty food in Phu Quoc\n\nEnjoy lively atmosphere at night with \"The Colors of Venice\""
+        },
+        {
+          "day": 5,
+          "title": "Sightseeing the Southern",
+          "content": "08:00 Pick-up from your hotel or nearest pickup point\n09:00 Begin your island journey!\nPearl Farm and showroom\nSim Wine Factory & Showroom\nPepper Farm\nFish Sauce Production House\nHo Quoc Pagoda & Coconut Prison (War Museum)\nSao Beach: Enjoy lunch, relax, swim, and sunbath\n15:30 – Check in and take photos at Sunset Town. Experience the Kiss Bridge (extra cost)\n16:30 – Drop-off at your hotel & end of tour\nOptional: On your way back, you may visit Sunset Sanato, Oc Sen Beach Bar, Sunset Beach Bar, or the Night Market (entry tickets not included & return transfer at own expense)"
+        },
+        {
+          "day": 6,
+          "title": "Departure",
+          "content": "Hotel Breakfast\nCheck out from the hotel and board your transfer to the airport"
+        }
+      ],
+      "seo": {
+        "title": "6 Days Phu Quoc Complete Tour - VinWonders - Grand World - Southern Island | TaHa Travel",
+        "description": "Ultimate 6-day Phu Quoc adventure. Hon Thom cable car, VinWonders, Grand World, Southern Island tour with Pearl Farm, Sim Wine, Pepper Farm. Complete island experience.",
+        "keywords": "phu quoc 6 days, vinwonders phu quoc, grand world, southern island tour, pearl farm phu quoc, sim wine, pepper farm, vietnam island vacation"
+      }
+    }
+  ]
+}

@@ -37,7 +37,7 @@ const HeaderComponent = {
                 <div class="container">
                     <div class="header-content">
                         <!-- Logo -->
-                        <a href="#" class="logo">
+                        <a href="index.html" class="logo">
                             <div class="logo-icon">
                                 <img src="https://tahatravelagency.com/wp-content/uploads/2025/06/Taha-1-800x800.png" alt="TaHa Travel Logo" class="logo-img">
                             </div>

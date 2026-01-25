@@ -3,7 +3,7 @@
  * Caching strategy for better performance
  */
 
-const CACHE_NAME = 'taha-travel-v1';
+const CACHE_NAME = 'taha-travel-v3';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -22,6 +22,10 @@ const urlsToCache = [
     '/css/components/testimonials.css',
     '/css/components/contact.css',
     '/css/components/tour-detail.css',
+    '/css/components/regions.css',
+    '/css/components/central.css',
+    '/css/components/south.css',
+    '/css/components/phuquoc.css',
     '/js/main.js',
     '/js/loader.js',
     '/js/tour-detail.js',
@@ -38,7 +42,10 @@ const urlsToCache = [
     '/js/components/tours.js',
     '/js/components/testimonials.js',
     '/js/components/contact.js',
-    '/data/tours.json'
+    '/data/tours.json',
+    '/data/central-tours.json',
+    '/data/south-tours.json',
+    '/data/phu-quoc-tours.json'
 ];
 
 // Install event - cache all static resources

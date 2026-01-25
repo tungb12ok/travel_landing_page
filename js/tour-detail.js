@@ -40,9 +40,30 @@ class TourDetail {
 
     async loadTourData(slug) {
         try {
-            const response = await fetch('data/tours.json');
-            const data = await response.json();
-            this.tour = data.tours.find(tour => tour.slug === slug);
+            // Try loading from all tour data files
+            const tourFiles = [
+                'data/tours.json',
+                'data/central-tours.json',
+                'data/south-tours.json',
+                'data/phu-quoc-tours.json'
+            ];
+
+            for (const file of tourFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const data = await response.json();
+                        const tour = data.tours.find(tour => tour.slug === slug);
+                        if (tour) {
+                            this.tour = tour;
+                            return;
+                        }
+                    }
+                } catch (err) {
+                    // Continue to next file if this one fails
+                    console.warn(`Could not load ${file}:`, err);
+                }
+            }
         } catch (error) {
             console.error('Error loading tour data:', error);
             throw error;
@@ -88,10 +109,11 @@ class TourDetail {
                 <iframe 
                     width="100%" 
                     height="500" 
-                    src="https://www.youtube.com/embed/${videoId}" 
+                    src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1" 
                     title="YouTube video player" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen>
                 </iframe>
             `;

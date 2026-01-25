@@ -6,16 +6,19 @@
 const SouthComponent = {
     destinations: [
         {
-            name: "4 Days : Ho Chi Minh - Cu Chi Tunnel - Mekong Delta",
-            image: "images/destinations/south/4-south.webp"
+            name: "4 Days Ho Chi Minh - Cu Chi Tunnel - Mekong Delta",
+            image: "images/destinations/south/4-south.webp",
+            slug: "ho-chi-minh-cu-chi-tunnel-mekong-delta-4-days"
         },
         {
-            name: "5 Days : Ho Chi Minh - Cu Chi Tunnel - Mekong Delta - Can Tho",
-            image: "images/destinations/south/5-south.webp"
+            name: "5 Days Ho Chi Minh - Cu Chi - Mekong - Saigon River Cruise",
+            image: "images/destinations/south/5-south.webp",
+            slug: "ho-chi-minh-cu-chi-mekong-saigon-river-cruise-5-days"
         },
         {
-            name: "6 Days : Ho Chi Minh - Cu Chi Tunnel - Mekong Delta - Phu Quoc Island",
-            image: "images/destinations/south/6-south.webp"
+            name: "6 Days Ho Chi Minh - Cu Chi - Mekong - Saigon Cruise - Vung Tau",
+            image: "images/destinations/south/6-south.webp",
+            slug: "ho-chi-minh-cu-chi-mekong-saigon-cruise-vung-tau-6-days"
         }
     ],
 
@@ -31,17 +34,23 @@ const SouthComponent = {
                     <!-- South Grid -->
                     <div class="south-grid">
                         ${this.destinations.map((destination, index) => `
-                            <div class="south-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                            <a href="tour-detail.html?tour=${destination.slug}" class="south-card" data-aos="fade-up" data-aos-delay="${index * 100}">
                                 <div class="south-image">
                                     <img src="${destination.image}" alt="${destination.name}">
                                     <div class="south-icon">
                                         <i class="fas fa-water"></i>
                                     </div>
+                                    <div class="south-overlay">
+                                        <span class="view-details">
+                                            <i class="fas fa-arrow-right"></i>
+                                            View Details
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="south-content">
                                     <p class="south-package">${destination.name}</p>
                                 </div>
-                            </div>
+                            </a>
                         `).join('')}
                     </div>
                 </div>

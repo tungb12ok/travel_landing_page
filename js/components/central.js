@@ -6,16 +6,19 @@
 const CentralComponent = {
     destinations: [
         {
-            name: "4 Days : Danang - Hoi An - Bana Hill Tour",
-            image: "images/destinations/central/4-hoi-an.jpeg"
+            name: "4 Days Da Nang - Bana Hill - Coconut Village - Hoi An",
+            image: "images/destinations/central/4-hoi-an.jpeg",
+            slug: "danang-bana-hill-coconut-village-hoi-an-4-days"
         },
         {
-            name: "5 Days : Danang Hoi An - Hue - Bana Hill Tour",
-            image: "images/destinations/central/5-hoi-an.webp"
+            name: "5 Days Da Nang - Bana Hill - Hoi An - Hue Imperial City",
+            image: "images/destinations/central/5-hoi-an.webp",
+            slug: "danang-bana-hill-hoi-an-hue-imperial-city-5-days"
         },
         {
-            name: "6 days : Danang - Hoi An - Hue - Saigon Cruise - Danang City Tour",
-            image: "images/destinations/central/6-hoi-an.webp"
+            name: "6 Days Da Nang - Bana Hill - Hoi An - Hue - Da Nang City Tour",
+            image: "images/destinations/central/6-hoi-an.webp",
+            slug: "danang-bana-hill-hoi-an-hue-danang-city-tour-6-days"
         }
     ],
 
@@ -31,17 +34,23 @@ const CentralComponent = {
                     <!-- Central Grid -->
                     <div class="central-grid">
                         ${this.destinations.map((destination, index) => `
-                            <div class="central-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                            <a href="tour-detail.html?tour=${destination.slug}" class="central-card" data-aos="fade-up" data-aos-delay="${index * 100}">
                                 <div class="central-image">
                                     <img src="${destination.image}" alt="${destination.name}">
                                     <div class="central-icon">
                                         <i class="fas fa-umbrella-beach"></i>
                                     </div>
+                                    <div class="central-overlay">
+                                        <span class="view-details">
+                                            <i class="fas fa-arrow-right"></i>
+                                            View Details
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="central-content">
                                     <p class="central-package">${destination.name}</p>
                                 </div>
-                            </div>
+                            </a>
                         `).join('')}
                     </div>
                 </div>
