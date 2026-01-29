@@ -565,6 +565,153 @@
 }
 
 /* ===========================
+   Included/Excluded Grid (Itinerary Detail)
+   =========================== */
+.included-excluded-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.included-card,
+.excluded-card {
+    background: white;
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.included-card .card-header,
+.excluded-card .card-header {
+    background: linear-gradient(135deg, #2c5f2d 0%, #4a7c59 100%);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.excluded-card .card-header {
+    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+}
+
+.included-card .card-header i,
+.excluded-card .card-header i {
+    font-size: 24px;
+}
+
+.included-card .card-header h3,
+.excluded-card .card-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.included-card .included-list,
+.excluded-card .excluded-list {
+    list-style: none;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.included-card .included-list li,
+.excluded-card .excluded-list li {
+    padding: 12px 12px 12px 40px;
+    position: relative;
+    background: transparent;
+    border-radius: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.included-card .included-list li:last-child,
+.excluded-card .excluded-list li:last-child {
+    border-bottom: none;
+}
+
+.included-card .included-list li i {
+    position: absolute;
+    left: 8px;
+    top: 14px;
+    color: #4caf50;
+    font-size: 18px;
+}
+
+.excluded-card .excluded-list li i {
+    position: absolute;
+    left: 8px;
+    top: 14px;
+    color: #f44336;
+    font-size: 18px;
+}
+
+/* ===========================
+   Travel Notes Section
+   =========================== */
+.travel-notes {
+    background: #fff9e6;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    padding: 25px 30px;
+}
+
+.notes-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.notes-header i {
+    color: #ffc107;
+    font-size: 24px;
+}
+
+.notes-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+.notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notes-list li {
+    padding-left: 35px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.notes-list li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #ff9800;
+    font-size: 16px;
+}
+
+/* Bullet points in itinerary text */
+.itinerary-text.bullet-point {
+    padding-left: 0;
+}
+
+/* ===========================
    Sidebar (Sticky)
    =========================== */
 .tour-sidebar {
@@ -877,6 +1024,14 @@
 
     .booking-card,
     .contact-card {
+        padding: 20px;
+    }
+
+    .included-excluded-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-notes {
         padding: 20px;
     }
 }

@@ -102,9 +102,9 @@ const ItineraryComponent = {
 
                     <!-- Download Button -->
                     <div class="itinerary-download" data-aos="fade-up">
-                        <a href="#contact" class="download-btn">
-                            <i class="fas fa-download"></i>
-                            Download Itinerary
+                        <a href="itinerary-detail.html" class="download-btn">
+                            <i class="fas fa-eye"></i>
+                            View Full Itinerary
                         </a>
                     </div>
                 </div>
@@ -114,6 +114,31 @@ const ItineraryComponent = {
 
     init() {
         document.getElementById('itinerary-component').innerHTML = this.template();
+        this.attachEventListeners();
+    },
+
+    attachEventListeners() {
+        // Add click event to make the entire itinerary section clickable
+        const itinerarySection = document.getElementById('itinerary');
+        if (itinerarySection) {
+            // Make the header clickable
+            const header = itinerarySection.querySelector('.itinerary-header');
+            if (header) {
+                header.style.cursor = 'pointer';
+                header.addEventListener('click', () => {
+                    window.location.href = 'itinerary-detail.html';
+                });
+            }
+
+            // Make the map clickable
+            const mapImage = itinerarySection.querySelector('.map-image');
+            if (mapImage) {
+                mapImage.style.cursor = 'pointer';
+                mapImage.addEventListener('click', () => {
+                    window.location.href = 'itinerary-detail.html';
+                });
+            }
+        }
     }
 };
 
