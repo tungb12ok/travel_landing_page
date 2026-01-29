@@ -66,6 +66,20 @@
     display: flex;
     align-items: center;
     gap: var(--space-3);
+    transition: all 0.3s ease;
+}
+
+/* Clickable timeline items */
+.timeline-item.clickable {
+    cursor: pointer;
+    padding-right: var(--space-4);
+    border-radius: var(--radius-lg);
+    margin: 4px 0;
+}
+
+.timeline-item.clickable:hover {
+    background: rgba(68, 115, 76, 0.08);
+    transform: translateX(8px);
 }
 
 .timeline-item::before {
@@ -81,12 +95,13 @@
     border-radius: var(--radius-full);
     z-index: 1;
     box-shadow: 0 0 0 4px rgba(68, 115, 76, 0.1);
+    transition: all 0.3s ease;
 }
 
 .timeline-item:hover::before {
     background: var(--primary-color);
-    transform: scale(1.2);
-    transition: all var(--transition-normal);
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 0 0 6px rgba(68, 115, 76, 0.15);
 }
 
 .timeline-day {
@@ -102,6 +117,66 @@
     color: var(--text-primary);
     line-height: var(--lh-relaxed);
     flex: 1;
+}
+
+/* View Day Button */
+.btn-view-day {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(68, 115, 76, 0.3);
+}
+
+.timeline-item:hover .btn-view-day {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.btn-view-day:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(68, 115, 76, 0.4);
+}
+
+.btn-view-day:active {
+    transform: translateY(0);
+}
+
+.btn-view-day i {
+    font-size: 11px;
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+.btn-view-day span {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+@keyframes pulseIcon {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Pointer cursor animation */
+.timeline-item.clickable:hover,
+.map-image:hover,
+.itinerary-header:hover {
+    cursor: pointer;
 }
 
 /* Map Section */
@@ -328,6 +403,17 @@
 
     .timeline-activity {
         font-size: var(--fs-xs);
+    }
+
+    /* View button responsive */
+    .btn-view-day {
+        opacity: 1;
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+
+    .btn-view-day i {
+        font-size: 10px;
     }
 
     /* Details cards responsive */

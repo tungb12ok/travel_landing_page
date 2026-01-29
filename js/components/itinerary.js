@@ -40,9 +40,13 @@ const ItineraryComponent = {
                         <div class="itinerary-timeline" data-aos="fade-right">
                             <div class="timeline-list">
                                 ${this.days.map((item, index) => `
-                                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="${index * 50}">
+                                    <div class="timeline-item clickable" data-aos="fade-up" data-aos-delay="${index * 50}" data-day="${item.day}">
                                         <div class="timeline-day">Day ${item.day}</div>
                                         <div class="timeline-activity">${item.activity}</div>
+                                        <button class="btn-view-day" data-day="${item.day}" title="View Day ${item.day} Details">
+                                            <i class="fas fa-eye"></i>
+                                            <span>View</span>
+                                        </button>
                                     </div>
                                 `).join('')}
                             </div>
@@ -138,6 +142,27 @@ const ItineraryComponent = {
                     window.location.href = 'itinerary-detail.html';
                 });
             }
+
+            // Make each timeline item clickable
+            const timelineItems = itinerarySection.querySelectorAll('.timeline-item.clickable');
+            timelineItems.forEach(item => {
+                // Click on the entire item
+                item.addEventListener('click', (e) => {
+                    // Don't trigger if clicking the button
+                    if (!e.target.closest('.btn-view-day')) {
+                        window.location.href = 'itinerary-detail.html';
+                    }
+                });
+            });
+
+            // View day buttons
+            const viewButtons = itinerarySection.querySelectorAll('.btn-view-day');
+            viewButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    window.location.href = 'itinerary-detail.html';
+                });
+            });
         }
     }
 };
