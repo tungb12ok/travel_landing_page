@@ -24,6 +24,7 @@ class TourDetail {
             }
 
             this.renderTourContent();
+            this.createLightbox();
             this.updateSEO();
             this.addStructuredData();
             this.initAOS();
@@ -136,7 +137,7 @@ class TourDetail {
                     <div class="day-slider" id="day-slider-${dayIndex}">
                         ${day.images.map((img, imgIndex) => `
                             <div class="slider-item ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">
-                                <img src="${img}" alt="${day.title} - Photo ${imgIndex + 1}" loading="lazy">
+                                <img src="${img}" alt="${day.title} - Photo ${imgIndex + 1}" loading="lazy" onclick="tourDetailInstance.openLightbox(${dayIndex}, ${imgIndex})">
                             </div>
                         `).join('')}
                     </div>
@@ -235,6 +236,89 @@ class TourDetail {
         // Add active class
         items[state.currentIndex].classList.add('active');
         dots[state.currentIndex].classList.add('active');
+    }
+
+    createLightbox() {
+        // Prevent duplicate lightboxes
+        if (document.getElementById('gallery-lightbox')) return;
+
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox-modal';
+        lightbox.id = 'gallery-lightbox';
+        lightbox.innerHTML = `
+            <span class="lightbox-close" onclick="tourDetailInstance.closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" class="lightbox-image" src="" alt="">
+                <button class="lightbox-nav prev" onclick="tourDetailInstance.changeLightboxSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-nav next" onclick="tourDetailInstance.changeLightboxSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="lightbox-counter" id="lightbox-caption"></div>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+        
+        // Close on click outside
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                this.closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('gallery-lightbox');
+            if (!lightbox || !lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') this.closeLightbox();
+            if (e.key === 'ArrowLeft') this.changeLightboxSlide(-1);
+            if (e.key === 'ArrowRight') this.changeLightboxSlide(1);
+        });
+    }
+
+    openLightbox(dayIndex, imgIndex) {
+        this.currentLightboxDay = dayIndex;
+        this.currentLightboxImage = imgIndex;
+        
+        this.updateLightboxImage();
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (lightbox) {
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    closeLightbox() {
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (lightbox) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    changeLightboxSlide(direction) {
+        if (this.currentLightboxDay === undefined) return;
+        
+        const day = this.tour.itinerary[this.currentLightboxDay];
+        const totalImages = day.images.length;
+        
+        this.currentLightboxImage = (this.currentLightboxImage + direction + totalImages) % totalImages;
+        this.updateLightboxImage();
+    }
+
+    updateLightboxImage() {
+        const day = this.tour.itinerary[this.currentLightboxDay];
+        const imgUrl = day.images[this.currentLightboxImage];
+        const caption = `${day.title} - Image ${this.currentLightboxImage + 1} of ${day.images.length}`;
+        
+        const imgElement = document.getElementById('lightbox-img');
+        if (imgElement) {
+            imgElement.src = imgUrl;
+            const captionEl = document.getElementById('lightbox-caption');
+            if (captionEl) captionEl.textContent = caption;
+        }
     }
 
     updateSEO() {
