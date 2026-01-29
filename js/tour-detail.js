@@ -129,7 +129,33 @@ class TourDetail {
     renderItinerary() {
         const container = document.getElementById('itinerary-container');
         
-        container.innerHTML = this.tour.itinerary.map(day => {
+        container.innerHTML = this.tour.itinerary.map((day, dayIndex) => {
+            // Render image gallery if images exist
+            const imageGalleryHTML = day.images && day.images.length > 0 ? `
+                <div class="day-gallery">
+                    <div class="day-slider" id="day-slider-${dayIndex}">
+                        ${day.images.map((img, imgIndex) => `
+                            <div class="slider-item ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">
+                                <img src="${img}" alt="${day.title} - Photo ${imgIndex + 1}" loading="lazy">
+                            </div>
+                        `).join('')}
+                    </div>
+                    ${day.images.length > 1 ? `
+                        <button class="slider-nav prev" onclick="tourDetailInstance.changeSlide(${dayIndex}, -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-nav next" onclick="tourDetailInstance.changeSlide(${dayIndex}, 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots">
+                            ${day.images.map((_, imgIndex) => `
+                                <span class="dot ${imgIndex === 0 ? 'active' : ''}" onclick="tourDetailInstance.goToSlide(${dayIndex}, ${imgIndex})"></span>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            ` : '';
+
             // Split content by newline and format each line
             const lines = day.content.split('\n').filter(line => line.trim());
             
@@ -156,12 +182,59 @@ class TourDetail {
                         <span class="day-number">Day ${day.day}:</span>
                         <h3 class="day-title">${day.title}</h3>
                     </div>
+                    ${imageGalleryHTML}
                     <div class="day-content">
                         ${formattedContent}
                     </div>
                 </div>
             `;
         }).join('');
+
+        // Store slider states
+        this.sliderStates = this.tour.itinerary.map(day => ({
+            currentIndex: 0,
+            totalImages: day.images ? day.images.length : 0
+        }));
+    }
+
+    changeSlide(dayIndex, direction) {
+        const state = this.sliderStates[dayIndex];
+        if (!state || state.totalImages <= 1) return;
+
+        const slider = document.getElementById(`day-slider-${dayIndex}`);
+        const items = slider.querySelectorAll('.slider-item');
+        const dots = slider.parentElement.querySelectorAll('.dot');
+
+        // Remove active class
+        items[state.currentIndex].classList.remove('active');
+        dots[state.currentIndex].classList.remove('active');
+
+        // Update index
+        state.currentIndex = (state.currentIndex + direction + state.totalImages) % state.totalImages;
+
+        // Add active class
+        items[state.currentIndex].classList.add('active');
+        dots[state.currentIndex].classList.add('active');
+    }
+
+    goToSlide(dayIndex, slideIndex) {
+        const state = this.sliderStates[dayIndex];
+        if (!state || state.totalImages <= 1) return;
+
+        const slider = document.getElementById(`day-slider-${dayIndex}`);
+        const items = slider.querySelectorAll('.slider-item');
+        const dots = slider.parentElement.querySelectorAll('.dot');
+
+        // Remove active class
+        items[state.currentIndex].classList.remove('active');
+        dots[state.currentIndex].classList.remove('active');
+
+        // Update index
+        state.currentIndex = slideIndex;
+
+        // Add active class
+        items[state.currentIndex].classList.add('active');
+        dots[state.currentIndex].classList.add('active');
     }
 
     updateSEO() {
@@ -253,7 +326,10 @@ class TourDetail {
     }
 }
 
+// Store instance globally for slider controls
+let tourDetailInstance;
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-    new TourDetail();
+    tourDetailInstance = new TourDetail();
 });
