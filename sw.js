@@ -3,7 +3,7 @@
  * Caching strategy for better performance
  */
 
-const CACHE_NAME = 'taha-travel-v7';
+const CACHE_NAME = 'taha-travel-v8';
 const urlsToCache = [   
     '/',
     '/index.html',
