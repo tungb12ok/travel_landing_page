@@ -133,24 +133,38 @@ class TourDetail {
         container.innerHTML = this.tour.itinerary.map((day, dayIndex) => {
             // Render image gallery if images exist
             const imageGalleryHTML = day.images && day.images.length > 0 ? `
-                <div class="day-gallery">
-                    <div class="day-slider" id="day-slider-${dayIndex}">
-                        ${day.images.map((img, imgIndex) => `
-                            <div class="slider-item ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">
-                                <img src="${img}" alt="${day.title} - Photo ${imgIndex + 1}" loading="lazy" onclick="tourDetailInstance.openLightbox(${dayIndex}, ${imgIndex})">
-                            </div>
-                        `).join('')}
+                <div class="gallery-wrapper" id="gallery-${dayIndex}">
+                    <div class="gallery-main">
+                        <div class="gallery-track" id="track-${dayIndex}" style="transform: translateX(0%)">
+                            ${day.images.map((img, imgIndex) => `
+                                <div class="gallery-slide">
+                                    <div class="slide-loader"><div class="loader-ring"></div></div>
+                                    <img src="${img}" alt="${day.title} - ${imgIndex + 1}" 
+                                         onload="this.parentElement.classList.add('loaded')">
+                                </div>
+                            `).join('')}
+                        </div>
+                        ${day.images.length > 1 ? `
+                            <button class="gallery-arrow gallery-prev" onclick="tourDetailInstance.slide(${dayIndex}, -1)">
+                                <i class="fas fa-angle-left"></i>
+                            </button>
+                            <button class="gallery-arrow gallery-next" onclick="tourDetailInstance.slide(${dayIndex}, 1)">
+                                <i class="fas fa-angle-right"></i>
+                            </button>
+                        ` : ''}
+                        <div class="gallery-controls">
+                            <span class="gallery-count" id="count-${dayIndex}">1 / ${day.images.length}</span>
+                            <button class="gallery-fullscreen" onclick="tourDetailInstance.openGalleryFullscreen(${dayIndex})">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
                     </div>
                     ${day.images.length > 1 ? `
-                        <button class="slider-nav prev" onclick="tourDetailInstance.changeSlide(${dayIndex}, -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="slider-nav next" onclick="tourDetailInstance.changeSlide(${dayIndex}, 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="slider-dots">
-                            ${day.images.map((_, imgIndex) => `
-                                <span class="dot ${imgIndex === 0 ? 'active' : ''}" onclick="tourDetailInstance.goToSlide(${dayIndex}, ${imgIndex})"></span>
+                        <div class="gallery-thumbs" id="thumbs-${dayIndex}">
+                            ${day.images.map((img, imgIndex) => `
+                                <div class="thumb-item ${imgIndex === 0 ? 'active' : ''}" onclick="tourDetailInstance.goToSlide(${dayIndex}, ${imgIndex})">
+                                    <img src="${img}" alt="Thumb ${imgIndex + 1}">
+                                </div>
                             `).join('')}
                         </div>
                     ` : ''}
@@ -198,44 +212,58 @@ class TourDetail {
         }));
     }
 
-    changeSlide(dayIndex, direction) {
+    slide(dayIndex, direction) {
         const state = this.sliderStates[dayIndex];
         if (!state || state.totalImages <= 1) return;
-
-        const slider = document.getElementById(`day-slider-${dayIndex}`);
-        const items = slider.querySelectorAll('.slider-item');
-        const dots = slider.parentElement.querySelectorAll('.dot');
-
-        // Remove active class
-        items[state.currentIndex].classList.remove('active');
-        dots[state.currentIndex].classList.remove('active');
-
-        // Update index
-        state.currentIndex = (state.currentIndex + direction + state.totalImages) % state.totalImages;
-
-        // Add active class
-        items[state.currentIndex].classList.add('active');
-        dots[state.currentIndex].classList.add('active');
+        
+        const newIndex = (state.currentIndex + direction + state.totalImages) % state.totalImages;
+        this.goToSlide(dayIndex, newIndex);
     }
 
-    goToSlide(dayIndex, slideIndex) {
+    goToSlide(dayIndex, index) {
         const state = this.sliderStates[dayIndex];
-        if (!state || state.totalImages <= 1) return;
+        if (!state) return;
+        
+        state.currentIndex = index;
+        
+        // Update track position
+        const track = document.getElementById(`track-${dayIndex}`);
+        if (track) {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+        
+        // Update counter
+        const count = document.getElementById(`count-${dayIndex}`);
+        if (count) {
+            count.textContent = `${index + 1} / ${state.totalImages}`;
+        }
+        
+        // Update thumbnails
+        const thumbs = document.querySelectorAll(`#thumbs-${dayIndex} .thumb-item`);
+        thumbs.forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === index);
+        });
+        
+        // Scroll thumbnail into view
+        const activeThumb = thumbs[index];
+        if (activeThumb) {
+            activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+    }
 
-        const slider = document.getElementById(`day-slider-${dayIndex}`);
-        const items = slider.querySelectorAll('.slider-item');
-        const dots = slider.parentElement.querySelectorAll('.dot');
-
-        // Remove active class
-        items[state.currentIndex].classList.remove('active');
-        dots[state.currentIndex].classList.remove('active');
-
-        // Update index
-        state.currentIndex = slideIndex;
-
-        // Add active class
-        items[state.currentIndex].classList.add('active');
-        dots[state.currentIndex].classList.add('active');
+    openGalleryFullscreen(dayIndex) {
+        const state = this.sliderStates[dayIndex];
+        if (!state) return;
+        
+        this.currentLightboxDay = dayIndex;
+        this.currentLightboxImage = state.currentIndex;
+        this.updateLightboxImage();
+        
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (lightbox) {
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     }
 
     createLightbox() {
@@ -255,7 +283,6 @@ class TourDetail {
                 <button class="lightbox-nav next" onclick="tourDetailInstance.changeLightboxSlide(1)">
                     <i class="fas fa-chevron-right"></i>
                 </button>
-                <div class="lightbox-counter" id="lightbox-caption"></div>
             </div>
         `;
         document.body.appendChild(lightbox);
@@ -311,13 +338,10 @@ class TourDetail {
     updateLightboxImage() {
         const day = this.tour.itinerary[this.currentLightboxDay];
         const imgUrl = day.images[this.currentLightboxImage];
-        const caption = `${day.title} - Image ${this.currentLightboxImage + 1} of ${day.images.length}`;
         
         const imgElement = document.getElementById('lightbox-img');
         if (imgElement) {
             imgElement.src = imgUrl;
-            const captionEl = document.getElementById('lightbox-caption');
-            if (captionEl) captionEl.textContent = caption;
         }
     }
 
