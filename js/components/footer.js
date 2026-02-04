@@ -97,12 +97,13 @@ const FooterComponent = {
                             <h4 class="footer-heading">Find us on map</h4>
                             <div class="footer-map">
                                 <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096272159498!2d105.84772807508098!3d21.028825080620476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab953357c995%3A0x1babf6bb474f35c6!2zVHLDoG5nIFRo4buLLCBIb8OgbiBLaeG6v20sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1704000000000!5m2!1svi!2s"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.199859202845!2d105.8390757768407!3d21.024687687915375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adc33af813ad%3A0x30c791976c5d57f0!2sTaha%20Travel%20Agency!5e0!3m2!1sen!2skr!4v1770176380953!5m2!1sen!2skr"
                                     width="100%" 
                                     height="200" 
                                     style="border:0; border-radius: 8px;" 
                                     allowfullscreen="" 
-                                    loading="lazy">
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </div>
                         </div>
