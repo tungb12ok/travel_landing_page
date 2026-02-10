@@ -74,26 +74,40 @@ class ItineraryDetail {
         const container = document.getElementById('itinerary-container');
         
         container.innerHTML = this.itinerary.itinerary.map((day, dayIndex) => {
-            // Render image gallery if images exist
+            // Render image gallery if images exist (same style as tour-detail.js)
             const imageGalleryHTML = day.images && day.images.length > 0 ? `
-                <div class="day-gallery">
-                    <div class="day-slider" id="day-slider-${dayIndex}">
-                        ${day.images.map((img, imgIndex) => `
-                            <div class="slider-item ${imgIndex === 0 ? 'active' : ''}" data-index="${imgIndex}">
-                                <img src="${img}" alt="${day.title} - Photo ${imgIndex + 1}" loading="lazy" onclick="itineraryDetailInstance.openLightbox(${dayIndex}, ${imgIndex})">
-                            </div>
-                        `).join('')}
+                <div class="gallery-wrapper" id="gallery-${dayIndex}">
+                    <div class="gallery-main">
+                        <div class="gallery-track" id="track-${dayIndex}" style="transform: translateX(0%)">
+                            ${day.images.map((img, imgIndex) => `
+                                <div class="gallery-slide">
+                                    <div class="slide-loader"><div class="loader-ring"></div></div>
+                                    <img src="${img}" alt="${day.title} - ${imgIndex + 1}" 
+                                         onload="this.parentElement.classList.add('loaded')">
+                                </div>
+                            `).join('')}
+                        </div>
+                        ${day.images.length > 1 ? `
+                            <button class="gallery-arrow gallery-prev" onclick="itineraryDetailInstance.slide(${dayIndex}, -1)">
+                                <i class="fas fa-angle-left"></i>
+                            </button>
+                            <button class="gallery-arrow gallery-next" onclick="itineraryDetailInstance.slide(${dayIndex}, 1)">
+                                <i class="fas fa-angle-right"></i>
+                            </button>
+                        ` : ''}
+                        <div class="gallery-controls">
+                            <span class="gallery-count" id="count-${dayIndex}">1 / ${day.images.length}</span>
+                            <button class="gallery-fullscreen" onclick="itineraryDetailInstance.openGalleryFullscreen(${dayIndex})">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
                     </div>
                     ${day.images.length > 1 ? `
-                        <button class="slider-nav prev" onclick="itineraryDetailInstance.changeSlide(${dayIndex}, -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="slider-nav next" onclick="itineraryDetailInstance.changeSlide(${dayIndex}, 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="slider-dots">
-                            ${day.images.map((_, imgIndex) => `
-                                <span class="dot ${imgIndex === 0 ? 'active' : ''}" onclick="itineraryDetailInstance.goToSlide(${dayIndex}, ${imgIndex})"></span>
+                        <div class="gallery-thumbs" id="thumbs-${dayIndex}">
+                            ${day.images.map((img, imgIndex) => `
+                                <div class="thumb-item ${imgIndex === 0 ? 'active' : ''}" onclick="itineraryDetailInstance.goToSlide(${dayIndex}, ${imgIndex})">
+                                    <img src="${img}" alt="Thumb ${imgIndex + 1}">
+                                </div>
                             `).join('')}
                         </div>
                     ` : ''}
@@ -146,6 +160,60 @@ class ItineraryDetail {
         }));
     }
 
+    slide(dayIndex, direction) {
+        const state = this.sliderStates[dayIndex];
+        if (!state || state.totalImages <= 1) return;
+        
+        const newIndex = (state.currentIndex + direction + state.totalImages) % state.totalImages;
+        this.goToSlide(dayIndex, newIndex);
+    }
+
+    goToSlide(dayIndex, index) {
+        const state = this.sliderStates[dayIndex];
+        if (!state) return;
+        
+        state.currentIndex = index;
+        
+        // Update track position
+        const track = document.getElementById(`track-${dayIndex}`);
+        if (track) {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+        
+        // Update counter
+        const count = document.getElementById(`count-${dayIndex}`);
+        if (count) {
+            count.textContent = `${index + 1} / ${state.totalImages}`;
+        }
+        
+        // Update thumbnails
+        const thumbs = document.querySelectorAll(`#thumbs-${dayIndex} .thumb-item`);
+        thumbs.forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === index);
+        });
+        
+        // Scroll thumbnail into view
+        const activeThumb = thumbs[index];
+        if (activeThumb) {
+            activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+    }
+
+    openGalleryFullscreen(dayIndex) {
+        const state = this.sliderStates[dayIndex];
+        if (!state) return;
+        
+        this.currentLightboxDay = dayIndex;
+        this.currentLightboxImage = state.currentIndex;
+        this.updateLightboxImage();
+        
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (lightbox) {
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
     renderIncludedExcluded() {
         // Render included items
         const includedList = document.getElementById('included-list');
@@ -171,46 +239,6 @@ class ItineraryDetail {
                 `<li><i class="fas fa-info-circle"></i> ${note}</li>`
             ).join('');
         }
-    }
-
-    changeSlide(dayIndex, direction) {
-        const state = this.sliderStates[dayIndex];
-        if (!state || state.totalImages <= 1) return;
-
-        const slider = document.getElementById(`day-slider-${dayIndex}`);
-        const items = slider.querySelectorAll('.slider-item');
-        const dots = slider.parentElement.querySelectorAll('.dot');
-
-        // Remove active class
-        items[state.currentIndex].classList.remove('active');
-        dots[state.currentIndex].classList.remove('active');
-
-        // Update index
-        state.currentIndex = (state.currentIndex + direction + state.totalImages) % state.totalImages;
-
-        // Add active class
-        items[state.currentIndex].classList.add('active');
-        dots[state.currentIndex].classList.add('active');
-    }
-
-    goToSlide(dayIndex, slideIndex) {
-        const state = this.sliderStates[dayIndex];
-        if (!state || state.totalImages <= 1) return;
-
-        const slider = document.getElementById(`day-slider-${dayIndex}`);
-        const items = slider.querySelectorAll('.slider-item');
-        const dots = slider.parentElement.querySelectorAll('.dot');
-
-        // Remove active class
-        items[state.currentIndex].classList.remove('active');
-        dots[state.currentIndex].classList.remove('active');
-
-        // Update index
-        state.currentIndex = slideIndex;
-
-        // Add active class
-        items[state.currentIndex].classList.add('active');
-        dots[state.currentIndex].classList.add('active');
     }
 
     createLightbox() {
